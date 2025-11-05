@@ -1,0 +1,18 @@
+# robots.txt para DogNavi
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://dognavi.org/sitemap.xml
+
+# Bloquear archivos del sistema (si los tuvieras)
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+
+# Permitir crawling de imágenes
+Allow: /images/
+
+# Permitir crawling de blog
+Allow: /blog/
