@@ -3,7 +3,7 @@
   
   <!-- Página Principal -->
   <url>
-    <loc>https://tudominio.com/</loc>
+    <loc>https://dognavi.org/</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- Calculadora de Alimentación -->
   <url>
-    <loc>https://tudominio.com/#calculadora</loc>
+    <loc>https://dognavi.org/#calculadora</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -19,7 +19,7 @@
 
   <!-- Blog - Artículo 1 -->
   <url>
-    <loc>https://tudominio.com/blog/senales-sobrealimentacion.html</loc>
+    <loc>https://dognavi.org/blog/senales-sobrealimentacion.html</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -35,4 +35,4 @@
   </url>
   -->
 
-</urlset>
+</urlset>s

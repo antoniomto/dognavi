@@ -78,7 +78,7 @@ public_html/
 
 ### Si compraste dominio en Hostinger:
 1. Ya está automáticamente conectado
-2. Tu sitio estará en: `tudominio.com`
+2. Tu sitio estará en: `dognavi.org`
 
 ### Si tienes dominio en otro proveedor:
 1. **En tu proveedor de dominio:**
@@ -98,7 +98,7 @@ public_html/
 
 ### Verificar que funciona:
 - Abre navegador privado
-- Ve a: `http://tudominio.com`
+- Ve a: `http://dognavi.org`
 - Deberías ver tu página de DogNavi
 
 ---
@@ -204,12 +204,12 @@ gtag('config', 'G-ABC123DEF456');
    <?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
-       <loc>https://tudominio.com/</loc>
+       <loc>https://dognavi.org/</loc>
        <lastmod>2025-11-03</lastmod>
        <priority>1.0</priority>
      </url>
      <url>
-       <loc>https://tudominio.com/blog/senales-sobrealimentacion.html</loc>
+       <loc>https://dognavi.org/blog/senales-sobrealimentacion.html</loc>
        <lastmod>2025-11-03</lastmod>
        <priority>0.8</priority>
      </url>
@@ -223,7 +223,7 @@ Crea archivo `robots.txt` en la raíz de `public_html`:
 ```
 User-agent: *
 Allow: /
-Sitemap: https://tudominio.com/sitemap.xml
+Sitemap: https://dognavi.org/sitemap.xml
 ```
 
 ### Personalizar Metadatos
@@ -231,12 +231,12 @@ Sitemap: https://tudominio.com/sitemap.xml
 1. Abre `index.html`
 2. Línea 9 - Cambia el dominio:
 ```html
-<link rel="canonical" href="https://tudominio.com/" />
+<link rel="canonical" href="https://dognavi.org/" />
 ```
 
 3. Línea 16 - Agrega tu URL completa:
 ```html
-<meta property="og:url" content="https://tudominio.com/" />
+<meta property="og:url" content="https://dognavi.org/" />
 ```
 
 ---
@@ -247,7 +247,7 @@ Sitemap: https://tudominio.com/sitemap.xml
 
 - [ ] Verificar que `index.html` carga correctamente
 - [ ] Probar la calculadora de alimentación (completar formulario y ver resultado)
-- [ ] Verificar que el artículo del blog carga: `tudominio.com/blog/senales-sobrealimentacion.html`
+- [ ] Verificar que el artículo del blog carga: `dognavi.org/blog/senales-sobrealimentacion.html`
 - [ ] Probar navegación desde móvil (menú hamburguesa)
 - [ ] Verificar que Google Analytics está capturando datos (tarda ~24hrs en mostrar)
 - [ ] Comprobar que todos los links internos funcionan
@@ -256,7 +256,7 @@ Sitemap: https://tudominio.com/sitemap.xml
 
 - [ ] Enviar sitio a Google Search Console
 - [ ] Crear 2 artículos adicionales para el blog (mínimo 1,000 palabras c/u)
-- [ ] Configurar cuenta de email profesional (email@tudominio.com)
+- [ ] Configurar cuenta de email profesional (email@dognavi.org)
 - [ ] Integrar Mailchimp o ConvertKit para newsletter
 - [ ] Hacer primeras publicaciones en redes sociales
 
