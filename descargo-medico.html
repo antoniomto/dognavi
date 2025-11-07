@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Descargo Médico y Veterinario | DogNavi</title>
+  <meta name="description" content="Información importante sobre el uso de las herramientas de DogNavi. No sustituimos atención veterinaria profesional." />
+  <link rel="canonical" href="https://dognavi.org/descargo-medico.html" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #F4EDE4;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #4A7A68;
+      padding: 1rem 5%;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFB347;
+    }
+
+    .legal-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      color: #4A7A68;
+      margin-bottom: 1rem;
+    }
+
+    .last-update {
+      color: #999;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #F4EDE4;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      color: #4A7A68;
+      margin: 2.5rem 0 1rem;
+    }
+
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      color: #4A7A68;
+      margin: 2rem 0 1rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    ul, ol {
+      margin: 1rem 0 1.5rem 2rem;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+
+    strong {
+      color: #4A7A68;
+      font-weight: 700;
+    }
+
+    .critical-warning {
+      background: #F8D7DA;
+      border: 3px solid #DC3545;
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 2rem 0;
+      color: #721C24;
+    }
+
+    .critical-warning h3 {
+      color: #DC3545;
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .info-box {
+      background: #D1ECF1;
+      border-left: 4px solid #17A2B8;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    .warning-box {
+      background: #FFF3CD;
+      border-left: 4px solid #FFC107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    .emergency-box {
+      background: linear-gradient(135deg, #DC3545 0%, #C82333 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .emergency-box h3 {
+      color: white;
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .emergency-box ul {
+      text-align: left;
+      margin: 1rem auto;
+      max-width: 600px;
+    }
+
+    .limitations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .limitation-card {
+      background: #F4EDE4;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border-left: 4px solid #FFB347;
+    }
+
+    .limitation-card h4 {
+      color: #4A7A68;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .resources-section {
+      background: #F4EDE4;
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 2rem 0;
+    }
+
+    .resources-section h3 {
+      margin-top: 0;
+    }
+
+    .resource-link {
+      display: block;
+      background: white;
+      padding: 1rem;
+      margin: 0.8rem 0;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #4A7A68;
+      font-weight: 700;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .resource-link:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    footer {
+      background-color: #4A7A68;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: #FFB347;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .legal-container {
+        padding: 2rem 1.5rem;
+        margin: 2rem 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .limitations-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">🐾 DogNavi</a>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#calculadora">Calculadora</a>
+        <a href="index.html#guias">Guías</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="legal-container">
+    
+    <h1>Descargo Médico y Veterinario</h1>
+    <p class="last-update">Última actualización: 5 de Noviembre de 2025</p>
+
+    <div class="critical-warning">
+      <h3>⚠️ AVISO IMPORTANTE</h3>
+      <p style="font-size: 1.1rem; line-height: 1.8;"><strong>DogNavi NO es un servicio veterinario ni ofrece consultas médicas.</strong> Nuestras herramientas, calculadoras y contenidos son de carácter <strong>informativo y educativo</strong> únicamente. <strong>NO sustituyen el diagnóstico, tratamiento ni consejo de un veterinario licenciado.</strong></p>
+      
+      <p style="margin-bottom: 0; font-size: 1.05rem;"><strong>Ante cualquier duda sobre la salud de tu mascota, consulta siempre con un profesional veterinario calificado.</strong></p>
+    </div>
+
+    <h2>1. Naturaleza de Nuestros Servicios</h2>
+    
+    <h3>1.1 Lo Que Somos</h3>
+    <p>DogNavi es una <strong>plataforma educativa</strong> que ofrece:</p>
+    <ul>
+      <li>Calculadoras de alimentación basadas en fórmulas estándar</li>
+      <li>Artículos informativos sobre cuidado canino</li>
+      <li>Guías prácticas de nutrición y bienestar</li>
+      <li>Recomendaciones generales de productos</li>
+    </ul>
+
+    <h3>1.2 Lo Que NO Somos</h3>
+    <p>DogNavi <strong>NO es:</strong></p>
+    <ul>
+      <li>❌ Un servicio veterinario o clínica veterinaria</li>
+      <li>❌ Un consultorio médico para mascotas</li>
+      <li>❌ Un servicio de diagnóstico de enfermedades</li>
+      <li>❌ Un reemplazo de atención veterinaria profesional</li>
+      <li>❌ Un servicio de emergencias 24/7</li>
+      <li>❌ Un proveedor de recetas médicas o tratamientos</li>
+    </ul>
+
+    <h2>2. Sobre Nuestras Herramientas</h2>
+
+    <h3>2.1 Calculadora de Alimentación</h3>
+    <div class="info-box">
+      <p><strong>Propósito:</strong> Proporcionar <strong>estimaciones orientativas</strong> sobre la cantidad de alimento que tu perro podría necesitar diariamente, basadas en fórmulas veterinarias estándar ampliamente reconocidas.</p>
+    </div>
+
+    <p><strong>Importante entender:</strong></p>
+    <ul>
+      <li>Los resultados son <strong>estimaciones generales</strong>, no prescripciones médicas</li>
+      <li>Se basan en promedios para perros sanos sin condiciones especiales</li>
+      <li>La calculadora NO considera tu perro individual específico y sus necesidades únicas</li>
+      <li>Los resultados deben ajustarse según la respuesta individual de tu mascota</li>
+    </ul>
+
+    <h3>2.2 Artículos y Guías</h3>
+    <p>Nuestros artículos:</p>
+    <ul>
+      <li>Están escritos con fines <strong>educativos e informativos</strong></li>
+      <li>Se basan en información veterinaria general y públicamente disponible</li>
+      <li>NO están personalizados para tu mascota específica</li>
+      <li>Pueden no reflejar las últimas actualizaciones en medicina veterinaria</li>
+      <li>NO deben usarse como única fuente para tomar decisiones médicas</li>
+    </ul>
+
+    <h2>3. Limitaciones de Nuestras Herramientas</h2>
+
+    <div class="limitations-grid">
+      <div class="limitation-card">
+        <h4>🚫 No Considera Condiciones Médicas</h4>
+        <p style="font-size: 0.95rem;">Diabetes, problemas renales, alergias, enfermedades cardíacas, etc., NO son considerados en los cálculos.</p>
+      </div>
+
+      <div class="limitation-card">
+        <h4>🚫 No Personalizada</h4>
+        <p style="font-size: 0.95rem;">No conocemos el historial médico, metabolismo específico o necesidades únicas de tu perro.</p>
+      </div>
+
+      <div class="limitation-card">
+        <h4>🚫 No Sustituye Evaluación</h4>
+        <p style="font-size: 0.95rem;">Un veterinario puede examinar físicamente a tu perro, hacer análisis y ajustar según hallazgos reales.</p>
+      </div>
+
+      <div class="limitation-card">
+        <h4>🚫 Fórmulas Estándar</h4>
+        <p style="font-size: 0.95rem;">Usamos fórmulas generales que pueden no aplicar perfectamente a todas las razas o individuos.</p>
+      </div>
+
+      <div class="limitation-card">
+        <h4>🚫 Sin Contexto Completo</h4>
+        <p style="font-size: 0.95rem;">No sabemos si tu perro está gestante, lactando, recuperándose de cirugía, etc.</p>
+      </div>
+
+      <div class="limitation-card">
+        <h4>🚫 No Actualizada en Tiempo Real</h4>
+        <p style="font-size: 0.95rem;">La ciencia veterinaria avanza constantemente. Nuestro contenido puede no reflejar los últimos estudios.</p>
+      </div>
+    </div>
+
+    <h2>4. Situaciones que Requieren Atención Veterinaria INMEDIATA</h2>
+
+    <div class="emergency-box">
+      <h3>🚨 Busca Ayuda Veterinaria URGENTE Si Observas:</h3>
+      <ul style="color: white;">
+        <li><strong>Dificultad para respirar</strong> o jadeo excesivo sin ejercicio</li>
+        <li><strong>Vómitos repetidos</strong> (más de 2-3 veces en pocas horas)</li>
+        <li><strong>Diarrea severa</strong> con sangre o que persiste más de 24 horas</li>
+        <li><strong>Colapso, convulsiones</strong> o pérdida de conciencia</li>
+        <li><strong>Abdomen hinchado y rígido</strong> (especialmente en razas grandes)</li>
+        <li><strong>Imposibilidad de orinar o defecar</strong></li>
+        <li><strong>Traumatismo grave</strong> (atropello, caída, pelea)</li>
+        <li><strong>Ingestión de tóxicos</strong> (chocolate, uvas, anticongelante, etc.)</li>
+        <li><strong>Sangrado que no se detiene</strong></li>
+        <li><strong>Cambio drástico de comportamiento</strong> (letargo extremo, agresividad repentina)</li>
+        <li><strong>Signos de dolor intenso</strong> (quejidos, no puede moverse)</li>
+        <li><strong>Temperatura superior a 39.5°C o inferior a 37°C</strong></li>
+      </ul>
+      <p style="margin-top: 1.5rem; font-size: 1.1rem;"><strong>En emergencias, NO uses nuestra calculadora. Llama a tu veterinario o clínica de emergencias 24/7 inmediatamente.</strong></p>
+    </div>
+
+    <h2>5. Cuándo Consultar con Tu Veterinario</h2>
+
+    <h3>Consulta Veterinaria Si:</h3>
+    <ul>
+      <li>Tu perro tiene <strong>cualquier condición médica diagnosticada</strong></li>
+      <li>Está tomando <strong>medicamentos</strong> de cualquier tipo</li>
+      <li>Estás considerando <strong>cambiar su dieta significativamente</strong></li>
+      <li>Observas <strong>pérdida o ganancia de peso inexplicable</strong></li>
+      <li>Tu perro es <strong>cachorro, senior, gestante o lactante</strong></li>
+      <li>Tiene <strong>alergias alimentarias conocidas</strong></li>
+      <li>Muestra <strong>cambios en apetito, energía o comportamiento</strong></li>
+      <li>No estás seguro sobre <strong>la calidad de su alimento actual</strong></li>
+      <li>Planeas usar <strong>suplementos o dietas especiales</strong> (BARF, casera, etc.)</li>
+      <li>Tu perro tiene <strong>sobrepeso u obesidad confirmados</strong></li>
+    </ul>
+
+    <div class="warning-box">
+      <strong>⚠️ Regla General:</strong> Si tienes alguna duda sobre la salud de tu mascota, <strong>siempre es mejor consultar</strong>. Los veterinarios prefieren atender una falsa alarma que tratar una emergencia que pudo prevenirse.
+    </div>
+
+    <h2>6. Responsabilidad del Usuario</h2>
+
+    <p>Al usar DogNavi, tú como dueño de mascota reconoces y aceptas que:</p>
+
+    <h3>6.1 Tu Responsabilidad</h3>
+    <ul>
+      <li>Eres el <strong>único responsable</strong> de las decisiones sobre la salud y alimentación de tu mascota</li>
+      <li>Debes <strong>validar toda información</strong> con un veterinario antes de tomar decisiones importantes</li>
+      <li>Usas nuestras herramientas <strong>bajo tu propio riesgo y criterio</strong></li>
+      <li>Entiendes que los resultados son <strong>orientativos, no definitivos</strong></li>
+      <li>Supervisarás activamente la <strong>respuesta de tu perro</strong> a cualquier cambio</li>
+    </ul>
+
+    <h3>6.2 Nuestra Limitación de Responsabilidad</h3>
+    <p>DogNavi <strong>NO se hace responsable por:</strong></p>
+    <ul>
+      <li>Decisiones tomadas basándose únicamente en nuestras herramientas</li>
+      <li>Problemas de salud derivados del uso de nuestras calculadoras</li>
+      <li>Diagnósticos incorrectos o tardíos por no consultar a un veterinario</li>
+      <li>Reacciones adversas a cambios de alimentación sugeridos por nuestro contenido</li>
+      <li>Productos adquiridos a través de enlaces de afiliados</li>
+      <li>Inexactitudes en el contenido (aunque nos esforzamos por mantenerlo actualizado)</li>
+    </ul>
+
+    <h2>7. Fuentes y Metodología</h2>
+
+    <h3>7.1 Base de Nuestros Cálculos</h3>
+    <p>Nuestras calculadoras utilizan:</p>
+    <ul>
+      <li><strong>Fórmulas RER/MER</strong> (Resting Energy Requirement / Maintenance Energy Requirement)</li>
+      <li><strong>Factores de actividad</strong> estándar según edad y nivel de ejercicio</li>
+      <li><strong>Rangos de peso</strong> generales por tamaño/raza</li>
+      <li><strong>Guías nutricionales</strong> de organizaciones veterinarias reconocidas</li>
+    </ul>
+
+    <p>Estas fórmulas son ampliamente usadas en medicina veterinaria, pero son <strong>puntos de partida</strong>, no prescripciones absolutas.</p>
+
+    <h3>7.2 Nuestras Referencias</h3>
+    <p>Consultamos información de fuentes como:</p>
+    <ul>
+      <li>American Kennel Club (AKC)</li>
+      <li>American Veterinary Medical Association (AVMA)</li>
+      <li>World Small Animal Veterinary Association (WSAVA)</li>
+      <li>Merck Veterinary Manual</li>
+      <li>Publicaciones científicas revisadas por pares</li>
+    </ul>
+
+    <p><strong>Sin embargo,</strong> estas fuentes proporcionan información general, y cada veterinario puede tener recomendaciones específicas diferentes basadas en su experiencia y el caso particular.</p>
+
+    <h2>8. Ajustes y Monitoreo</h2>
+
+    <div class="info-box">
+      <h3 style="margin-top: 0;">💡 Cómo Usar Nuestras Herramientas Responsablemente</h3>
+      <ol>
+        <li><strong>Punto de partida:</strong> Usa los resultados como referencia inicial</li>
+        <li><strong>Consulta veterinaria:</strong> Valida con tu veterinario, especialmente si hay condiciones especiales</li>
+        <li><strong>Implementación gradual:</strong> Haz cambios de alimentación progresivamente (7-10 días)</li>
+        <li><strong>Monitoreo activo:</strong> Observa peso, energía, apetito y heces de tu perro</li>
+        <li><strong>Ajustes necesarios:</strong> Modifica porciones según respuesta individual (±10-15%)</li>
+        <li><strong>Revisión periódica:</strong> Reevalúa cada 2-4 semanas y ajusta según necesidad</li>
+      </ol>
+    </div>
+
+    <h3>Señales de que Necesitas Ajustar:</h3>
+    <ul>
+      <li><strong>Si pierde peso:</strong> Aumenta la porción gradualmente</li>
+      <li><strong>Si gana peso:</strong> Reduce la porción o aumenta ejercicio</li>
+      <li><strong>Si está letárgico:</strong> Puede necesitar más calorías o revisión veterinaria</li>
+      <li><strong>Si mendiga constantemente:</strong> Puede necesitar ajuste en distribución de comidas</li>
+      <li><strong>Si tiene problemas digestivos:</strong> Consulta veterinario inmediatamente</li>
+    </ul>
+
+    <h2>9. Condiciones Especiales NO Cubiertas</h2>
+
+    <p>Nuestras herramientas <strong>NO están diseñadas</strong> para perros con:</p>
+
+    <div class="limitations-grid">
+      <div class="limitation-card">
+        <h4>Condiciones Médicas</h4>
+        <p style="font-size: 0.9rem;">Diabetes, insuficiencia renal, enfermedad cardíaca, problemas hepáticos, pancreatitis, alergias severas</p>
+      </div>
+
+      <div class="limitation-card">
+        <h4>Estados Fisiológicos Especiales</h4>
+        <p style="font-size: 0.9rem;">Gestación, lactancia, recuperación post-cirugía, convalecencia</p>
+      </div>
+
+      <div class="limitation-card">
+        <h4>Desórdenes Alimentarios</h4>
+        <p style="font-size: 0.9rem;">Obesidad mórbida, anorexia, pica (comer cosas no comestibles)</p>
+      </div>
+
+      <div class="limitation-card">
+        <h4>Dietas Terapéuticas</h4>
+        <p style="font-size: 0.9rem;">Alimentos recetados por veterinario para condiciones específicas</p>
+      </div>
+
+      <div class="limitation-card">
+        <h4>Cachorros Muy Jóvenes</h4>
+        <p style="font-size: 0.9rem;">Menores de 8 semanas que requieren atención especializada</p>
+      </div>
+
+      <div class="limitation-card">
+        <h4>Perros de Trabajo Extremo</h4>
+        <p style="font-size: 0.9rem;">Perros de trineo, búsqueda y rescate, militares con necesidades calóricas extremas</p>
+      </div>
+    </div>
+
+    <p><strong>Si tu perro tiene cualquiera de estas condiciones, consulta con tu veterinario antes de usar nuestras herramientas.</strong></p>
+
+    <h2>10. Actualizaciones y Cambios</h2>
+
+    <p>Nos esforzamos por mantener nuestro contenido actualizado con las mejores prácticas veterinarias, pero:</p>
+    <ul>
+      <li>La ciencia veterinaria <strong>evoluciona constantemente</strong></li>
+      <li>Nuevos estudios pueden <strong>cambiar recomendaciones</strong></li>
+      <li>Nuestro contenido puede <strong>no reflejar los hallazgos más recientes</strong></li>
+      <li>Revisamos y actualizamos periódicamente, pero no en tiempo real</li>
+    </ul>
+
+    <p>Fecha de última revisión de metodología: <strong>Noviembre 2025</strong></p>
+
+    <h2>11. Recursos Veterinarios Profesionales</h2>
+
+    <div class="resources-section">
+      <h3>🏥 Encuentra Atención Veterinaria Profesional</h3>
+      <p>Si necesitas consultar con un veterinario:</p>
+
+      <a href="https://www.veterinaria.org/directorio" target="_blank" class="resource-link">
+        🔍 Directorio de Veterinarios en México
+      </a>
+
+      <a href="https://www.aspca.org/pet-care/animal-poison-control" target="_blank" class="resource-link">
+        ☠️ Centro de Control de Envenenamiento Animal (ASPCA)
+      </a>
+
+      <a href="https://www.akc.org/expert-advice/health/" target="_blank" class="resource-link">
+        📚 Recursos de Salud Canina (American Kennel Club)
+      </a>
+
+      <a href="https://www.avma.org/resources/pet-owners" target="_blank" class="resource-link">
+        🩺 Información para Dueños (AVMA)
+      </a>
+    </div>
+
+    <h2>12. Contacto para Dudas sobre Este Descargo</h2>
+
+    <p>Si tienes preguntas sobre este descargo o sobre las limitaciones de nuestras herramientas:</p>
+    <ul>
+      <li>📧 <strong>Email:</strong> <a href="mailto:contacto@dognavi.org" style="color: #4A7A68;">contacto@dognavi.org</a></li>
+      <li>📄 <strong>Contacto:</strong> <a href="contacto.html" style="color: #4A7A68;">Formulario de Contacto</a></li>
+    </ul>
+
+    <p><strong>Nota importante:</strong> No podemos proporcionar consejos veterinarios individuales por email. Para consultas sobre la salud de tu mascota, contacta a un veterinario licenciado.</p>
+
+    <hr style="margin: 3rem 0; border: none; border-top: 2px solid #F4EDE4;">
+
+    <div class="critical-warning">
+      <h3 style="margin-top: 0;">✅ Resumen Final</h3>
+      <p style="font-size: 1.05rem; line-height: 1.8;">DogNavi es una herramienta educativa útil para <strong>orientarte</strong> sobre la alimentación de tu perro, pero <strong>nunca debe reemplazar el juicio profesional de un veterinario.</strong> Usa nuestras herramientas como punto de partida, no como verdad absoluta. La salud de tu mascota es lo más importante, y un veterinario calificado es siempre tu mejor aliado.</p>
+    </div>
+
+    <p style="text-align: center; color: #999; font-size: 0.9rem; margin-top: 2rem;">
+      <strong>Última revisión:</strong> 5 de Noviembre de 2025<br>
+      <strong>Versión:</strong> 1.0
+    </p>
+
+  </div>
+
+  <footer>
+    <p>© 2025 DogNavi · <a href="index.html">Volver al Inicio</a> · <a href="aviso-legal.html">Aviso Legal</a></p>
+  </footer>
+
+</body>
+</html>

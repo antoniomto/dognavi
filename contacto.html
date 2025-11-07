@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Contacto | DogNavi</title>
+  <meta name="description" content="Contáctanos para cualquier pregunta, sugerencia o consulta sobre DogNavi. Respondemos en 24-48 horas." />
+  <link rel="canonical" href="https://dognavi.org/contacto.html" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #F4EDE4;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #4A7A68;
+      padding: 1rem 5%;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFB347;
+    }
+
+    .contact-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      color: #4A7A68;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-method {
+      background: #F4EDE4;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .contact-method:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-method h3 {
+      font-family: 'Poppins', sans-serif;
+      color: #4A7A68;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-method p {
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+
+    .contact-method a {
+      color: #4A7A68;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+
+    .contact-method a:hover {
+      color: #FFB347;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      color: #4A7A68;
+      margin: 2.5rem 0 1.5rem;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      color: #4A7A68;
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .required {
+      color: #dc3545;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #E0E0E0;
+      border-radius: 12px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #4A7A68;
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-group small {
+      display: block;
+      margin-top: 0.5rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #FFB347 0%, #FFC974 100%);
+      color: #333;
+      padding: 1.2rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      font-family: 'Nunito', sans-serif;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(255, 179, 71, 0.4);
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 179, 71, 0.5);
+    }
+
+    .submit-btn:active {
+      transform: translateY(-1px);
+    }
+
+    .success-message {
+      display: none;
+      background: #D4EDDA;
+      border: 2px solid #28A745;
+      color: #155724;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .error-message {
+      display: none;
+      background: #F8D7DA;
+      border: 2px solid #DC3545;
+      color: #721C24;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .faq-section {
+      background: #F4EDE4;
+      padding: 2rem;
+      border-radius: 15px;
+      margin-top: 3rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid #E0E0E0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-question {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #4A7A68;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-answer {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .faq-answer a {
+      color: #4A7A68;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .response-time {
+      background: linear-gradient(135deg, #4A7A68 0%, #5a8a78 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .response-time h3 {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: #4A7A68;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: #FFB347;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        padding: 2rem 1.5rem;
+        margin: 2rem 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">🐾 DogNavi</a>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#calculadora">Calculadora</a>
+        <a href="index.html#guias">Guías</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="contact-container">
+    
+    <h1>Contáctanos</h1>
+    <p class="subtitle">¿Tienes preguntas, sugerencias o necesitas ayuda? Estamos aquí para ti.</p>
+
+    <!-- Métodos de Contacto -->
+    <div class="contact-grid">
+      <div class="contact-method">
+        <div class="contact-icon">📧</div>
+        <h3>Email</h3>
+        <p><a href="mailto:contacto@dognavi.org">contacto@dognavi.org</a></p>
+        <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Respuesta en 24-48 horas</p>
+      </div>
+
+      <div class="contact-method">
+        <div class="contact-icon">💬</div>
+        <h3>Formulario</h3>
+        <p>Completa el formulario abajo</p>
+        <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">La forma más rápida</p>
+      </div>
+    </div>
+
+    <!-- Formulario de Contacto -->
+    <h2>Envíanos un Mensaje</h2>
+
+    <form id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Nombre <span class="required">*</span></label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="tu@email.com">
+          <small>No compartiremos tu email con terceros</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="asunto">Asunto <span class="required">*</span></label>
+        <select id="asunto" name="asunto" required>
+          <option value="">Selecciona un asunto</option>
+          <option value="calculadora">Pregunta sobre la Calculadora</option>
+          <option value="contenido">Sugerencia de Contenido</option>
+          <option value="error">Reportar un Error</option>
+          <option value="colaboracion">Propuesta de Colaboración</option>
+          <option value="privacidad">Consulta sobre Privacidad</option>
+          <option value="afiliados">Pregunta sobre Afiliados</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Mensaje <span class="required">*</span></label>
+        <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea>
+        <small>Mínimo 20 caracteres</small>
+      </div>
+
+      <button type="submit" class="submit-btn">Enviar Mensaje</button>
+
+      <div class="success-message" id="successMessage">
+        ✅ <strong>¡Mensaje enviado con éxito!</strong><br>
+        Te responderemos a la brevedad en tu email.
+      </div>
+
+      <div class="error-message" id="errorMessage">
+        ❌ <strong>Error al enviar el mensaje.</strong><br>
+        Por favor, intenta de nuevo o escríbenos directamente a contacto@dognavi.org
+      </div>
+    </form>
+
+    <div class="response-time">
+      <h3>⏱️ Tiempo de Respuesta</h3>
+      <p><strong>24-48 horas hábiles</strong> para consultas generales</p>
+      <p style="font-size: 0.9rem; margin-top: 0.5rem;">Consultas urgentes: indica "URGENTE" en el asunto</p>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+      <h2 style="text-align: left; margin-top: 0;">❓ Preguntas Frecuentes</h2>
+      <p style="color: #666; margin-bottom: 2rem;">Antes de contactarnos, revisa si tu pregunta ya tiene respuesta:</p>
+
+      <div class="faq-item">
+        <div class="faq-question">¿La calculadora de alimentación es gratuita?</div>
+        <div class="faq-answer">Sí, 100% gratuita y sin registro. Úsala todas las veces que necesites.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿Los resultados de la calculadora son precisos?</div>
+        <div class="faq-answer">Son estimaciones basadas en fórmulas veterinarias estándar. Para necesidades específicas o condiciones médicas, consulta con tu veterinario. Lee más en nuestra página <a href="descargo-medico.html">Descargo Médico</a>.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿Cómo eliminan mis datos personales?</div>
+        <div class="faq-answer">Envíanos un email a <a href="mailto:contacto@dognavi.org">contacto@dognavi.org</a> con el asunto "ARCO - Cancelación" y tu solicitud será procesada en 20 días hábiles. Más info en <a href="privacidad.html">Política de Privacidad</a>.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿Puedo sugerir un tema para el blog?</div>
+        <div class="faq-answer">¡Sí! Usa el formulario arriba seleccionando "Sugerencia de Contenido" como asunto. Leemos todas las sugerencias.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿Cómo funcionan los enlaces de afiliados?</div>
+        <div class="faq-answer">Cuando compras a través de nuestros enlaces, ganamos una pequeña comisión sin costo extra para ti. Lee todos los detalles en <a href="afiliados.html">Divulgación de Afiliados</a>.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿Ofrecen consultas veterinarias?</div>
+        <div class="faq-answer">No. DogNavi NO es un servicio veterinario. Para consultas médicas sobre tu mascota, contacta a un veterinario licenciado.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿Puedo colaborar con DogNavi?</div>
+        <div class="faq-answer">Sí, estamos abiertos a colaboraciones. Usa el formulario seleccionando "Propuesta de Colaboración" y cuéntanos tu idea.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿Tienen app móvil?</div>
+        <div class="faq-answer">Actualmente no, pero nuestro sitio es 100% responsive y funciona perfectamente en móviles. Guarda dognavi.org en tus favoritos para acceso rápido.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2025 DogNavi · <a href="index.html">Volver al Inicio</a> · <a href="privacidad.html">Política de Privacidad</a></p>
+  </footer>
+
+  <script>
+    // Manejo del formulario de contacto
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Validación básica
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const asunto = document.getElementById('asunto').value;
+      const mensaje = document.getElementById('mensaje').value.trim();
+      
+      // Ocultar mensajes previos
+      document.getElementById('successMessage').style.display = 'none';
+      document.getElementById('errorMessage').style.display = 'none';
+      
+      // Validaciones
+      if (nombre.length < 2) {
+        alert('Por favor ingresa un nombre válido');
+        return;
+      }
+      
+      if (!email.includes('@') || !email.includes('.')) {
+        alert('Por favor ingresa un email válido');
+        return;
+      }
+      
+      if (!asunto) {
+        alert('Por favor selecciona un asunto');
+        return;
+      }
+      
+      if (mensaje.length < 20) {
+        alert('El mensaje debe tener al menos 20 caracteres');
+        return;
+      }
+      
+      // Cambiar texto del botón
+      const btn = document.querySelector('.submit-btn');
+      const originalText = btn.textContent;
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+      
+      // Simulación de envío (en producción, esto enviaría el form a un servidor)
+      // IMPORTANTE: Deberás configurar un backend o servicio como Formspree, EmailJS, etc.
+      
+      setTimeout(() => {
+        // Mostrar mensaje de éxito
+        document.getElementById('successMessage').style.display = 'block';
+        
+        // Reset form
+        document.getElementById('contactForm').reset();
+        
+        // Restaurar botón
+        btn.textContent = originalText;
+        btn.disabled = false;
+        
+        // Scroll al mensaje de éxito
+        document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Nota: En producción real, aquí enviarías los datos a tu backend
+        console.log('Formulario enviado:', { nombre, email, asunto, mensaje });
+      }, 1500);
+    });
+  </script>
+
+</body>
+</html>

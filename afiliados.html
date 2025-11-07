@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Divulgación de Afiliados | DogNavi</title>
+  <meta name="description" content="Transparencia sobre enlaces de afiliados en DogNavi. Cómo generamos ingresos sin afectar tu precio final." />
+  <link rel="canonical" href="https://dognavi.org/afiliados.html" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #F4EDE4;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #4A7A68;
+      padding: 1rem 5%;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFB347;
+    }
+
+    .legal-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      color: #4A7A68;
+      margin-bottom: 1rem;
+    }
+
+    .last-update {
+      color: #999;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #F4EDE4;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      color: #4A7A68;
+      margin: 2.5rem 0 1rem;
+    }
+
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      color: #4A7A68;
+      margin: 2rem 0 1rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    ul, ol {
+      margin: 1rem 0 1.5rem 2rem;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+
+    strong {
+      color: #4A7A68;
+      font-weight: 700;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #FFB347 0%, #FFC974 100%);
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 2rem 0;
+      color: #333;
+    }
+
+    .transparency-box {
+      background: #D1ECF1;
+      border-left: 4px solid #17A2B8;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    .example-box {
+      background: #F4EDE4;
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 2rem 0;
+      border: 2px dashed #4A7A68;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .comparison-table th {
+      background-color: #4A7A68;
+      color: white;
+      padding: 1rem;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #F4EDE4;
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background-color: #F9F9F9;
+    }
+
+    .check-mark {
+      color: #28a745;
+      font-size: 1.2rem;
+    }
+
+    .x-mark {
+      color: #dc3545;
+      font-size: 1.2rem;
+    }
+
+    .affiliate-badge {
+      display: inline-block;
+      background: #FFB347;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      background-color: #4A7A68;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: #FFB347;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .legal-container {
+        padding: 2rem 1.5rem;
+        margin: 2rem 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .comparison-table {
+        font-size: 0.9rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">🐾 DogNavi</a>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#calculadora">Calculadora</a>
+        <a href="index.html#productos">Productos</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="legal-container">
+    
+    <h1>Divulgación de Afiliados</h1>
+    <p class="last-update">Última actualización: 5 de Noviembre de 2025</p>
+
+    <div class="highlight-box">
+      <h2 style="color: #333; margin-top: 0;">💡 En Resumen</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 0;"><strong>DogNavi puede ganar una pequeña comisión cuando compras productos a través de nuestros enlaces, sin costo adicional para ti.</strong> Esta transparencia es importante para nosotros. Te explicamos exactamente cómo funciona.</p>
+    </div>
+
+    <h2>1. ¿Qué Son los Enlaces de Afiliados?</h2>
+    <p>Los enlaces de afiliados son <strong>URLs especiales</strong> que contienen un código único que nos identifica. Cuando haces clic en uno de estos enlaces y realizas una compra, el vendedor nos paga una pequeña comisión.</p>
+
+    <h3>Analogía Simple</h3>
+    <p>Imagina que recomiendas un restaurante a un amigo. El dueño del restaurante, agradecido por la recomendación, te da un 5% de descuento en tu próxima comida. Los enlaces de afiliados funcionan igual: <strong>recomendamos productos útiles y recibimos una pequeña compensación si decides comprarlos.</strong></p>
+
+    <h2>2. Programas de Afiliados en los que Participamos</h2>
+    <p>DogNavi participa actualmente en los siguientes programas de afiliados:</p>
+
+    <h3>2.1 Amazon Associates</h3>
+    <p><span class="affiliate-badge">PROGRAMA PRINCIPAL</span></p>
+    <p><strong>DogNavi es participante del Programa de Asociados de Amazon.</strong> Esto significa que cuando haces clic en un enlace de producto de Amazon desde nuestro sitio y realizas una compra, podemos recibir una comisión.</p>
+
+    <p><strong>Divulgación oficial de Amazon:</strong></p>
+    <p style="font-style: italic; padding-left: 1rem; border-left: 3px solid #FFB347;">"Como Asociado de Amazon, DogNavi obtiene ingresos por compras adscritas que cumplan los requisitos aplicables."</p>
+
+    <h3>2.2 Otros Programas</h3>
+    <p>También podemos participar en programas de afiliados de:</p>
+    <ul>
+      <li><strong>Chewy:</strong> Tienda online de productos para mascotas</li>
+      <li><strong>Petco:</strong> Productos y servicios para mascotas</li>
+      <li><strong>PetSmart:</strong> Alimento, juguetes y accesorios</li>
+    </ul>
+
+    <p>Esta lista puede actualizarse sin previo aviso a medida que encontremos nuevos productos de calidad para recomendar.</p>
+
+    <h2>3. ¿Cómo Afecta Esto al Precio que Pagas?</h2>
+
+    <div class="transparency-box">
+      <h3 style="margin-top: 0; color: #17A2B8;">✅ La Respuesta Corta: NO Afecta</h3>
+      <p style="font-size: 1.1rem;"><strong>El precio que pagas es exactamente el mismo</strong> si compras a través de nuestro enlace o directamente en el sitio del vendedor. La comisión de afiliado sale del margen de ganancia del vendedor, NO de tu bolsillo.</p>
+    </div>
+
+    <h3>Ejemplo Real</h3>
+    <div class="example-box">
+      <p><strong>Producto:</strong> Comedero Inteligente para Perros</p>
+      
+      <table class="comparison-table" style="margin-top: 1rem;">
+        <thead>
+          <tr>
+            <th>Escenario</th>
+            <th>Precio que Pagas</th>
+            <th>Lo que Recibe el Vendedor</th>
+            <th>Comisión DogNavi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Compras directo en Amazon</strong></td>
+            <td>$49.99</td>
+            <td>$49.99</td>
+            <td>$0.00</td>
+          </tr>
+          <tr>
+            <td><strong>Compras vía enlace DogNavi</strong></td>
+            <td>$49.99</td>
+            <td>$47.49</td>
+            <td>$2.50 (5%)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+        <strong>Nota:</strong> Los porcentajes de comisión varían según el programa y categoría de producto. Amazon típicamente paga entre 1-10% dependiendo del tipo de producto.
+      </p>
+    </div>
+
+    <h2>4. ¿Cómo Identificar Enlaces de Afiliados?</h2>
+    <p>Somos <strong>100% transparentes</strong> sobre cuándo un enlace es de afiliado. Lo indicamos de las siguientes formas:</p>
+
+    <h3>4.1 En la Sección de Productos</h3>
+    <ul>
+      <li>Texto que dice: <em>"Enlaces de afiliado"</em> o <em>"Link de afiliado"</em> debajo del botón</li>
+      <li>Nota al pie de la sección: <em>"Algunos enlaces son de afiliado"</em></li>
+    </ul>
+
+    <h3>4.2 En Artículos del Blog</h3>
+    <ul>
+      <li>Disclaimer al inicio o final del artículo</li>
+      <li>Nota junto al producto recomendado</li>
+    </ul>
+
+    <h3>4.3 Técnicamente</h3>
+    <p>Los enlaces de afiliado contienen códigos identificadores. Ejemplo de URL de Amazon:</p>
+    <p style="font-family: monospace; background: #F4EDE4; padding: 1rem; border-radius: 8px; word-break: break-all; font-size: 0.9rem;">
+      https://www.amazon.com/dp/B08XYZ1234<strong style="color: #FFB347;">?tag=dognavi-20</strong>
+    </p>
+    <p>El parámetro <code style="color: #FFB347; font-weight: 700;">?tag=dognavi-20</code> indica que es un enlace de afiliado.</p>
+
+    <h2>5. Nuestra Promesa de Integridad Editorial</h2>
+
+    <div class="transparency-box">
+      <h3 style="margin-top: 0;">🤝 Nuestros Principios</h3>
+      <ol style="margin-left: 1rem;">
+        <li style="margin-bottom: 1rem;"><strong>Honestidad primero:</strong> Solo recomendamos productos que genuinamente creemos que beneficiarán a tu perro.</li>
+        <li style="margin-bottom: 1rem;"><strong>Independencia editorial:</strong> Las comisiones NO influyen en qué productos recomendamos. La utilidad para tu mascota es lo primero.</li>
+        <li style="margin-bottom: 1rem;"><strong>Opiniones reales:</strong> Nunca promocionamos un producto solo porque paga mejor comisión.</li>
+        <li style="margin-bottom: 0;"><strong>Transparencia total:</strong> Siempre te diremos cuándo un enlace es de afiliado.</li>
+      </ol>
+    </div>
+
+    <h3>Lo Que Esto Significa en Práctica</h3>
+    <ul>
+      <li>✅ Si un comedero de $20 es mejor que uno de $100, recomendaremos el de $20 (aunque ganemos menos comisión)</li>
+      <li>✅ Si no encontramos un producto que valga la pena, te lo diremos honestamente</li>
+      <li>✅ Nuestras guías y calculadoras son 100% gratuitas y útiles, independientemente de si compras algo</li>
+      <li>❌ NUNCA inflaremos virtudes de un producto solo para generar ventas</li>
+    </ul>
+
+    <h2>6. ¿Por Qué Usamos Enlaces de Afiliados?</h2>
+    <p>Mantener DogNavi requiere tiempo, esfuerzo y dinero:</p>
+
+    <h3>6.1 Costos de Operación</h3>
+    <ul>
+      <li><strong>Hosting y dominio:</strong> ~$100/año</li>
+      <li><strong>Investigación y redacción:</strong> 20-40 horas/semana</li>
+      <li><strong>Herramientas y plugins:</strong> ~$50/mes</li>
+      <li><strong>Consultas veterinarias:</strong> Para validar información</li>
+    </ul>
+
+    <h3>6.2 Nuestro Modelo Sostenible</h3>
+    <p>Los ingresos por afiliados nos permiten:</p>
+    <ul>
+      <li>✅ Mantener el sitio <strong>100% gratuito</strong> para usuarios</li>
+      <li>✅ Crear contenido de calidad sin anuncios intrusivos</li>
+      <li>✅ Mejorar constantemente nuestras herramientas (calculadoras, guías)</li>
+      <li>✅ Responder consultas de la comunidad</li>
+    </ul>
+
+    <p><strong>Alternativas que rechazamos:</strong></p>
+    <ul>
+      <li>❌ Cobrar por el acceso al sitio</li>
+      <li>❌ Llenar el sitio de anuncios pop-up molestos</li>
+      <li>❌ Vender tus datos personales</li>
+    </ul>
+
+    <h2>7. ¿Qué Pasa Si No Quieres Usar Enlaces de Afiliados?</h2>
+    <p><strong>¡Está perfectamente bien!</strong> Tienes varias opciones:</p>
+
+    <h3>Opción 1: Busca el Producto Directamente</h3>
+    <p>Puedes tomar el nombre del producto que recomendamos y buscarlo directamente en Amazon u otra tienda. Seguirás pagando el mismo precio, pero no generaremos comisión.</p>
+
+    <h3>Opción 2: Usa la Información sin Comprar</h3>
+    <p>Nuestras guías, calculadoras y artículos son <strong>completamente gratuitos</strong> y útiles por sí mismos. No tienes obligación de comprar nada para beneficiarte del contenido.</p>
+
+    <h3>Opción 3: Compra en Tienda Física</h3>
+    <p>Si prefieres ver los productos en persona, puedes usar nuestras recomendaciones como guía de compra para tiendas físicas.</p>
+
+    <p style="font-style: italic; color: #666;">Dicho esto, si decides comprar a través de nuestros enlaces, <strong>nos ayudas enormemente</strong> a seguir creando contenido gratuito de calidad. ¡Gracias por tu apoyo! 💚</p>
+
+    <h2>8. Cómo Seleccionamos los Productos</h2>
+    <p>Nuestro proceso de selección es riguroso:</p>
+
+    <h3>Paso 1: Investigación</h3>
+    <ul>
+      <li>Leemos decenas de reseñas de usuarios reales</li>
+      <li>Comparamos especificaciones técnicas</li>
+      <li>Consultamos estándares veterinarios cuando aplica</li>
+    </ul>
+
+    <h3>Paso 2: Evaluación</h3>
+    <ul>
+      <li>¿Es seguro para las mascotas?</li>
+      <li>¿Tiene buena relación calidad-precio?</li>
+      <li>¿Resuelve un problema real?</li>
+      <li>¿Tiene buenas calificaciones (mínimo 4 estrellas)?</li>
+    </ul>
+
+    <h3>Paso 3: Verificación</h3>
+    <ul>
+      <li>Comprobamos que el producto esté disponible</li>
+      <li>Verificamos que el precio sea competitivo</li>
+      <li>Nos aseguramos de que la marca sea confiable</li>
+    </ul>
+
+    <h3>Criterios de Exclusión</h3>
+    <p><strong>NO recomendamos productos que:</strong></p>
+    <ul>
+      <li>❌ Tengan historial de recalls o problemas de seguridad</li>
+      <li>❌ Provengan de marcas con malas prácticas</li>
+      <li>❌ Tengan calificaciones consistentemente bajas</li>
+      <li>❌ Sean innecesariamente caros sin justificación</li>
+    </ul>
+
+    <h2>9. Actualizaciones de Productos</h2>
+    <p>Revisamos periódicamente nuestras recomendaciones porque:</p>
+    <ul>
+      <li>Los productos pueden descontinuarse</li>
+      <li>Pueden aparecer mejores alternativas en el mercado</li>
+      <li>Los precios cambian</li>
+      <li>Nuevas reseñas pueden revelar problemas</li>
+    </ul>
+
+    <p><strong>Frecuencia de revisión:</strong></p>
+    <ul>
+      <li>Productos principales: cada 3 meses</li>
+      <li>Artículos de blog: cada 6 meses</li>
+      <li>Alertas inmediatas si hay recalls o problemas reportados</li>
+    </ul>
+
+    <h2>10. Relación con Marcas y Vendedores</h2>
+
+    <h3>10.1 Independencia Total</h3>
+    <p>DogNavi <strong>NO tiene acuerdos directos</strong> con marcas específicas de productos para mascotas. No recibimos:</p>
+    <ul>
+      <li>❌ Pagos directos por mencionar marcas específicas</li>
+      <li>❌ Productos gratuitos a cambio de reseñas positivas</li>
+      <li>❌ Compensación por posicionar una marca sobre otra</li>
+    </ul>
+
+    <h3>10.2 Nuestra Única Relación</h3>
+    <p>Nuestra única relación comercial es con <strong>plataformas de afiliados</strong> (Amazon Associates, Chewy, etc.), no con fabricantes de productos individuales.</p>
+
+    <h2>11. Preguntas Frecuentes</h2>
+
+    <h3>¿El enlace de afiliado expira?</h3>
+    <p>Sí. Las cookies de afiliado típicamente duran <strong>24 horas</strong> (Amazon) a 30 días (otros programas). Si haces clic hoy pero compras mañana, seguimos recibiendo comisión. Si compras después del período, no.</p>
+
+    <h3>¿Ganáis comisión por todo lo que compro?</h3>
+    <p><strong>Solo por productos elegibles del programa de afiliados.</strong> Por ejemplo, en Amazon, ciertos productos (como Kindle ebooks, suscripciones Prime) no generan comisión.</p>
+
+    <h3>¿Puedo saber cuánto ganáis por producto?</h3>
+    <p>Los porcentajes exactos varían según categoría y programa:</p>
+    <ul>
+      <li><strong>Amazon:</strong> 1-10% dependiendo del tipo de producto</li>
+      <li><strong>Chewy:</strong> hasta 30% en primeras compras</li>
+      <li><strong>Otros:</strong> 3-15% típicamente</li>
+    </ul>
+
+    <h3>¿Recomendáis productos que no son de afiliados?</h3>
+    <p><strong>¡Sí, absolutamente!</strong> En nuestras guías a veces mencionamos marcas, veterinarios, o recursos sin ningún enlace de afiliado, simplemente porque son útiles.</p>
+
+    <h3>¿Qué pasa si el producto no me satisface?</h3>
+    <p>Las políticas de devolución y garantía son <strong>responsabilidad del vendedor</strong> (Amazon, Chewy, etc.), no de DogNavi. Contacta directamente al servicio al cliente de la tienda para devoluciones.</p>
+
+    <h2>12. Cumplimiento Legal</h2>
+    <p>Esta divulgación cumple con:</p>
+    <ul>
+      <li><strong>FTC Guidelines (USA):</strong> 16 CFR Part 255 - Endorsements and Testimonials</li>
+      <li><strong>Amazon Associates Program:</strong> Políticas de divulgación requeridas</li>
+      <li><strong>PROFECO (México):</strong> Transparencia en publicidad y promociones</li>
+      <li><strong>Leyes de Protección al Consumidor:</strong> De los países donde operamos</li>
+    </ul>
+
+    <h2>13. Cambios en Esta Política</h2>
+    <p>Esta Divulgación de Afiliados puede actualizarse si:</p>
+    <ul>
+      <li>Nos unimos a nuevos programas de afiliados</li>
+      <li>Cambian las regulaciones legales</li>
+      <li>Modificamos nuestras prácticas de recomendación</li>
+    </ul>
+
+    <p>Los cambios se notificarán actualizando la fecha de "Última actualización" al inicio de esta página.</p>
+
+    <h2>14. Contacto y Transparencia</h2>
+    <p>Si tienes preguntas sobre nuestros enlaces de afiliados o recomendaciones de productos:</p>
+
+    <ul>
+      <li>📧 <strong>Email:</strong> <a href="mailto:contacto@dognavi.org" style="color: #4A7A68;">contacto@dognavi.org</a></li>
+      <li>💬 <strong>Asunto:</strong> "Afiliados - [Tu pregunta]"</li>
+      <li>⏱️ <strong>Respuesta:</strong> 24-48 horas hábiles</li>
+    </ul>
+
+    <div class="highlight-box" style="margin-top: 3rem;">
+      <h3 style="color: #333; margin-top: 0;">🙏 Gracias por Tu Apoyo</h3>
+      <p style="margin-bottom: 0; font-size: 1.05rem;">Usar nuestros enlaces de afiliados es una forma simple de apoyar a DogNavi sin ningún costo extra para ti. Cada compra nos ayuda a mantener el sitio gratuito, crear mejor contenido y ayudar a más dueños a cuidar mejor de sus perros. ¡Gracias por ser parte de nuestra comunidad! 🐾</p>
+    </div>
+
+    <hr style="margin: 3rem 0; border: none; border-top: 2px solid #F4EDE4;">
+
+    <p style="text-align: center; color: #999; font-size: 0.9rem;">
+      <strong>Última revisión:</strong> 5 de Noviembre de 2025<br>
+      <strong>Versión:</strong> 1.0
+    </p>
+
+  </div>
+
+  <footer>
+    <p>© 2025 DogNavi · <a href="index.html">Volver al Inicio</a> · <a href="aviso-legal.html">Aviso Legal</a></p>
+  </footer>
+
+</body>
+</html>

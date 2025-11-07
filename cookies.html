@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Política de Cookies | DogNavi</title>
+  <meta name="description" content="Política de cookies de DogNavi. Cómo utilizamos cookies y tecnologías similares para mejorar tu experiencia." />
+  <link rel="canonical" href="https://dognavi.org/cookies.html" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #F4EDE4;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #4A7A68;
+      padding: 1rem 5%;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFB347;
+    }
+
+    .legal-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      color: #4A7A68;
+      margin-bottom: 1rem;
+    }
+
+    .last-update {
+      color: #999;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #F4EDE4;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      color: #4A7A68;
+      margin: 2.5rem 0 1rem;
+    }
+
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      color: #4A7A68;
+      margin: 2rem 0 1rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    ul, ol {
+      margin: 1rem 0 1.5rem 2rem;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+
+    strong {
+      color: #4A7A68;
+      font-weight: 700;
+    }
+
+    .highlight-box {
+      background: #D1ECF1;
+      border-left: 4px solid #17A2B8;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-size: 0.95rem;
+    }
+
+    .cookie-table th {
+      background-color: #4A7A68;
+      color: white;
+      padding: 1rem;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    .cookie-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #F4EDE4;
+      vertical-align: top;
+    }
+
+    .cookie-table tr:hover {
+      background-color: #F9F9F9;
+    }
+
+    .cookie-type {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .cookie-necessary {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .cookie-analytics {
+      background-color: #17a2b8;
+      color: white;
+    }
+
+    .cookie-advertising {
+      background-color: #ffc107;
+      color: #333;
+    }
+
+    .how-to-box {
+      background: #F4EDE4;
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 2rem 0;
+    }
+
+    .browser-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .browser-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .browser-item strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #4A7A68;
+    }
+
+    footer {
+      background-color: #4A7A68;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: #FFB347;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .legal-container {
+        padding: 2rem 1.5rem;
+        margin: 2rem 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .cookie-table {
+        font-size: 0.85rem;
+      }
+
+      .cookie-table th,
+      .cookie-table td {
+        padding: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">🐾 DogNavi</a>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#calculadora">Calculadora</a>
+        <a href="index.html#guias">Guías</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="legal-container">
+    
+    <h1>Política de Cookies</h1>
+    <p class="last-update">Última actualización: 5 de Noviembre de 2025</p>
+
+    <div class="highlight-box">
+      <strong>🍪 ¿Qué son las cookies?</strong> Las cookies son pequeños archivos de texto que los sitios web guardan en tu dispositivo para recordar tus preferencias y mejorar tu experiencia. Son como "recordatorios digitales" que hacen que el sitio funcione mejor para ti.
+    </div>
+
+    <h2>1. ¿Qué Son las Cookies?</h2>
+    <p>Las cookies son <strong>archivos de texto pequeños</strong> (generalmente menos de 1 KB) que se almacenan en tu navegador cuando visitas un sitio web. Contienen información como:</p>
+    <ul>
+      <li>Tus preferencias de idioma</li>
+      <li>Si ya aceptaste nuestros términos</li>
+      <li>Qué páginas visitaste</li>
+      <li>Tu identificador anónimo de sesión</li>
+    </ul>
+
+    <p><strong>Analogía simple:</strong> Imagina las cookies como las "notas adhesivas" que un bibliotecario pone en los libros que consultaste, para encontrarlos más rápido la próxima vez. No contienen tu información personal (como nombre o email), solo "marcadores" anónimos.</p>
+
+    <h2>2. ¿Por Qué Usamos Cookies?</h2>
+    <p>DogNavi utiliza cookies para:</p>
+    <ul>
+      <li>✅ <strong>Hacer que el sitio funcione correctamente</strong> (cookies necesarias)</li>
+      <li>📊 <strong>Entender cómo usas el sitio</strong> para mejorarlo (cookies analíticas)</li>
+      <li>🎯 <strong>Mostrar anuncios relevantes</strong> en lugar de aleatorios (cookies publicitarias)</li>
+      <li>🔒 <strong>Recordar tus preferencias de privacidad</strong> (como tu elección sobre cookies)</li>
+    </ul>
+
+    <h2>3. Tipos de Cookies que Utilizamos</h2>
+
+    <h3>3.1 Por Finalidad</h3>
+
+    <h4>🟢 Cookies Estrictamente Necesarias</h4>
+    <p><span class="cookie-type cookie-necessary">OBLIGATORIAS</span></p>
+    <p>Estas cookies son <strong>esenciales</strong> para que el sitio funcione. Sin ellas, servicios básicos no estarían disponibles.</p>
+
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Propósito</th>
+          <th>Duración</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>cookie_consent</strong></td>
+          <td>Recuerda tu elección sobre cookies (aceptar/rechazar)</td>
+          <td>1 año</td>
+        </tr>
+        <tr>
+          <td><strong>PHPSESSID</strong></td>
+          <td>Mantiene tu sesión activa mientras navegas</td>
+          <td>Sesión (se borra al cerrar navegador)</td>
+        </tr>
+        <tr>
+          <td><strong>security</strong></td>
+          <td>Previene ataques CSRF (Cross-Site Request Forgery)</td>
+          <td>Sesión</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Base legal:</strong> Interés legítimo (necesarias para prestar el servicio). No requieren consentimiento previo.</p>
+
+    <h4>🔵 Cookies Analíticas</h4>
+    <p><span class="cookie-type cookie-analytics">OPCIONALES</span></p>
+    <p>Nos ayudan a entender cómo los visitantes interactúan con el sitio para mejorarlo.</p>
+
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Propósito</th>
+          <th>Duración</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>_ga</strong></td>
+          <td>Identifica visitantes únicos (Google Analytics)</td>
+          <td>2 años</td>
+        </tr>
+        <tr>
+          <td><strong>_ga_XXXXXXXXXX</strong></td>
+          <td>Mantiene el estado de la sesión (Google Analytics 4)</td>
+          <td>2 años</td>
+        </tr>
+        <tr>
+          <td><strong>_gid</strong></td>
+          <td>Distingue usuarios únicos</td>
+          <td>24 horas</td>
+        </tr>
+        <tr>
+          <td><strong>_gat</strong></td>
+          <td>Limita la tasa de solicitudes (throttling)</td>
+          <td>1 minuto</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Información recopilada:</strong></p>
+    <ul>
+      <li>Páginas visitadas y tiempo en cada página</li>
+      <li>Cómo llegaste al sitio (búsqueda, enlace directo, redes sociales)</li>
+      <li>Tipo de dispositivo y navegador (ej: "Chrome en Android")</li>
+      <li>País y ciudad aproximada (basado en IP)</li>
+    </ul>
+
+    <p><strong>Base legal:</strong> Consentimiento. Puedes rechazarlas en el banner de cookies.</p>
+
+    <h4>🟡 Cookies Publicitarias</h4>
+    <p><span class="cookie-type cookie-advertising">OPCIONALES</span></p>
+    <p>Permiten mostrar anuncios relevantes y medir su efectividad.</p>
+
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Propósito</th>
+          <th>Duración</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>__gads</strong></td>
+          <td>Registra interacción con anuncios (Google AdSense)</td>
+          <td>13 meses</td>
+        </tr>
+        <tr>
+          <td><strong>__gpi</strong></td>
+          <td>Recopila info sobre cómo usas anuncios de Google</td>
+          <td>13 meses</td>
+        </tr>
+        <tr>
+          <td><strong>IDE</strong></td>
+          <td>Identifica navegador para personalizar anuncios (DoubleClick)</td>
+          <td>13 meses</td>
+        </tr>
+        <tr>
+          <td><strong>test_cookie</strong></td>
+          <td>Verifica si el navegador acepta cookies</td>
+          <td>15 minutos</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Base legal:</strong> Consentimiento. Puedes rechazarlas sin afectar la funcionalidad del sitio.</p>
+
+    <h3>3.2 Por Propiedad</h3>
+
+    <h4>Cookies Propias (First-Party)</h4>
+    <p>Establecidas directamente por DogNavi. Ejemplo:</p>
+    <ul>
+      <li><code>cookie_consent</code> - Tu elección sobre cookies</li>
+      <li><code>PHPSESSID</code> - Tu sesión activa</li>
+    </ul>
+
+    <h4>Cookies de Terceros (Third-Party)</h4>
+    <p>Establecidas por servicios externos que usamos. Ejemplos:</p>
+    <ul>
+      <li><strong>Google Analytics:</strong> <code>_ga</code>, <code>_gid</code></li>
+      <li><strong>Google AdSense:</strong> <code>__gads</code>, <code>IDE</code></li>
+    </ul>
+
+    <p>Consulta sus políticas de privacidad:</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy" target="_blank" style="color: #4A7A68;">Política de Google</a></li>
+      <li><a href="https://policies.google.com/technologies/ads" target="_blank" style="color: #4A7A68;">Publicidad de Google</a></li>
+    </ul>
+
+    <h3>3.3 Por Duración</h3>
+
+    <h4>Cookies de Sesión</h4>
+    <p>Se eliminan automáticamente cuando cierras el navegador. Ejemplo: <code>PHPSESSID</code></p>
+
+    <h4>Cookies Persistentes</h4>
+    <p>Permanecen en tu dispositivo hasta que expiran o las eliminas manualmente. Duración habitual en DogNavi:</p>
+    <ul>
+      <li><strong>Corto plazo:</strong> 24 horas (ejemplo: <code>_gid</code>)</li>
+      <li><strong>Medio plazo:</strong> 13 meses (ejemplo: <code>__gads</code>)</li>
+      <li><strong>Largo plazo:</strong> 2 años (ejemplo: <code>_ga</code>)</li>
+    </ul>
+
+    <h2>4. Tu Consentimiento y Control</h2>
+
+    <h3>4.1 Banner de Cookies</h3>
+    <p>La primera vez que visitas DogNavi, verás un banner en la parte inferior con opciones:</p>
+    <ul>
+      <li>✅ <strong>Aceptar todas:</strong> Acepta cookies necesarias, analíticas y publicitarias</li>
+      <li>⚙️ <strong>Configurar:</strong> Elige qué tipos de cookies aceptar</li>
+      <li>❌ <strong>Rechazar opcionales:</strong> Solo cookies necesarias (el sitio sigue funcionando)</li>
+    </ul>
+
+    <p>Tu elección se guarda y no volveremos a preguntarte, salvo que borres cookies o cambies de dispositivo.</p>
+
+    <h3>4.2 Cambiar Tu Elección en Cualquier Momento</h3>
+    <p>Puedes modificar tus preferencias de cookies:</p>
+    <ul>
+      <li>Haciendo clic en el enlace <strong>"Preferencias de Cookies"</strong> en el footer del sitio</li>
+      <li>Borrando las cookies desde tu navegador (ver sección siguiente)</li>
+    </ul>
+
+    <h2>5. Cómo Gestionar Cookies desde Tu Navegador</h2>
+
+    <div class="how-to-box">
+      <h3 style="margin-top: 0;">📱 Guías por Navegador</h3>
+      <p>Puedes bloquear o eliminar cookies desde la configuración de tu navegador. Aquí te explicamos cómo:</p>
+
+      <div class="browser-list">
+        <div class="browser-item">
+          <strong>🌐 Google Chrome</strong>
+          <p style="font-size: 0.9rem;">Menú > Configuración > Privacidad y seguridad > Cookies</p>
+          <a href="https://support.google.com/chrome/answer/95647" target="_blank" style="color: #4A7A68; font-size: 0.85rem;">Guía oficial →</a>
+        </div>
+
+        <div class="browser-item">
+          <strong>🦊 Mozilla Firefox</strong>
+          <p style="font-size: 0.9rem;">Menú > Configuración > Privacidad y seguridad</p>
+          <a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-" target="_blank" style="color: #4A7A68; font-size: 0.85rem;">Guía oficial →</a>
+        </div>
+
+        <div class="browser-item">
+          <strong>🧭 Safari (macOS)</strong>
+          <p style="font-size: 0.9rem;">Preferencias > Privacidad > Cookies y datos</p>
+          <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" style="color: #4A7A68; font-size: 0.85rem;">Guía oficial →</a>
+        </div>
+
+        <div class="browser-item">
+          <strong>📱 Safari (iOS)</strong>
+          <p style="font-size: 0.9rem;">Ajustes > Safari > Bloquear cookies</p>
+          <a href="https://support.apple.com/es-es/HT201265" target="_blank" style="color: #4A7A68; font-size: 0.85rem;">Guía oficial →</a>
+        </div>
+
+        <div class="browser-item">
+          <strong>🔵 Microsoft Edge</strong>
+          <p style="font-size: 0.9rem;">Menú > Configuración > Cookies y permisos</p>
+          <a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" style="color: #4A7A68; font-size: 0.85rem;">Guía oficial →</a>
+        </div>
+
+        <div class="browser-item">
+          <strong>⚙️ Opera</strong>
+          <p style="font-size: 0.9rem;">Menú > Configuración > Privacidad y seguridad</p>
+          <a href="https://help.opera.com/en/latest/web-preferences/#cookies" target="_blank" style="color: #4A7A68; font-size: 0.85rem;">Guía oficial →</a>
+        </div>
+      </div>
+    </div>
+
+    <h3>5.1 Opciones Avanzadas</h3>
+
+    <h4>Bloquear Cookies de Terceros</h4>
+    <p>La mayoría de navegadores modernos permiten bloquear específicamente cookies de terceros (como las de Google Analytics) mientras permites las del sitio principal.</p>
+
+    <h4>Navegación Privada/Incógnito</h4>
+    <p>En modo incógnito, las cookies se eliminan automáticamente al cerrar la ventana. Útil si compartes dispositivo.</p>
+
+    <h4>Extensiones Anti-Tracking</h4>
+    <p>Puedes instalar extensiones como:</p>
+    <ul>
+      <li><strong>uBlock Origin:</strong> Bloqueador de anuncios y rastreadores</li>
+      <li><strong>Privacy Badger:</strong> Bloquea rastreadores automáticamente</li>
+      <li><strong>Ghostery:</strong> Muestra qué rastreadores hay en cada sitio</li>
+    </ul>
+
+    <h2>6. Consecuencias de Rechazar Cookies</h2>
+
+    <h3>✅ Si Rechazas Cookies Analíticas y Publicitarias</h3>
+    <p><strong>El sitio funciona perfectamente.</strong> Solo perderás:</p>
+    <ul>
+      <li>Personalización de anuncios (verás anuncios genéricos en su lugar)</li>
+      <li>Contribución anónima a nuestras estadísticas de mejora</li>
+    </ul>
+
+    <h3>⚠️ Si Bloqueas TODAS las Cookies (incluso necesarias)</h3>
+    <p>Podrías experimentar:</p>
+    <ul>
+      <li>Tener que aceptar el banner de cookies en cada visita</li>
+      <li>No poder usar formularios de contacto</li>
+      <li>Problemas de navegación (páginas que no cargan correctamente)</li>
+    </ul>
+
+    <h2>7. Tecnologías Similares a Cookies</h2>
+    <p>Además de cookies, DogNavi puede utilizar:</p>
+
+    <h3>7.1 Web Storage (Local Storage / Session Storage)</h3>
+    <p>Similar a cookies pero con más capacidad de almacenamiento. Usamos Local Storage para:</p>
+    <ul>
+      <li>Recordar tus preferencias de cookies</li>
+      <li>Guardar temporalmente resultados de la calculadora (solo en tu navegador, no se envía al servidor)</li>
+    </ul>
+
+    <h3>7.2 Píxeles de Seguimiento</h3>
+    <p>Pequeñas imágenes invisibles que nos ayudan a medir:</p>
+    <ul>
+      <li>Cuántas personas abrieron el newsletter</li>
+      <li>Efectividad de campañas publicitarias</li>
+    </ul>
+
+    <h3>7.3 Google Analytics 4 (Medición sin Cookies)</h3>
+    <p>Desde 2024, Google Analytics puede funcionar parcialmente <strong>sin cookies</strong> usando "señales de consentimiento". Si rechazas cookies analíticas, solo se recopilan métricas agregadas sin identificarte.</p>
+
+    <h2>8. Cookies de Redes Sociales</h2>
+    <p>Si compartimos contenido en redes sociales o incrustamos videos (YouTube), esas plataformas pueden colocar sus propias cookies cuando interactúas con ellas.</p>
+
+    <p><strong>Plataformas que pueden colocar cookies:</strong></p>
+    <ul>
+      <li>Facebook (botones de "Compartir")</li>
+      <li>Twitter/X (integración de tweets)</li>
+      <li>YouTube (videos incrustados)</li>
+      <li>Instagram (feeds)</li>
+    </ul>
+
+    <p>Consulta sus políticas de cookies:</p>
+    <ul>
+      <li><a href="https://www.facebook.com/policies/cookies/" target="_blank" style="color: #4A7A68;">Cookies de Facebook</a></li>
+      <li><a href="https://help.twitter.com/es/rules-and-policies/twitter-cookies" target="_blank" style="color: #4A7A68;">Cookies de Twitter/X</a></li>
+      <li><a href="https://policies.google.com/technologies/cookies" target="_blank" style="color: #4A7A68;">Cookies de Google (YouTube)</a></li>
+    </ul>
+
+    <h2>9. Publicidad Personalizada</h2>
+
+    <h3>9.1 ¿Cómo Funciona?</h3>
+    <p>Si aceptas cookies publicitarias, Google y otros proveedores pueden:</p>
+    <ul>
+      <li>Recordar que visitaste DogNavi</li>
+      <li>Mostrarte anuncios relacionados con perros en otros sitios</li>
+      <li>Medir si haces clic en anuncios</li>
+    </ul>
+
+    <p><strong>Ejemplo:</strong> Visitas nuestra calculadora → días después ves un anuncio de alimento para perros en otro sitio. Esto es remarketing.</p>
+
+    <h3>9.2 Opt-Out de Publicidad Personalizada</h3>
+    <p>Puedes desactivar la personalización en:</p>
+    <ul>
+      <li><strong>Google Ads:</strong> <a href="https://adssettings.google.com" target="_blank" style="color: #4A7A68;">Configuración de Anuncios</a></li>
+      <li><strong>Digital Advertising Alliance:</strong> <a href="http://optout.aboutads.info" target="_blank" style="color: #4A7A68;">Opt-Out de Múltiples Redes</a></li>
+      <li><strong>Your Online Choices (Europa):</strong> <a href="https://www.youronlinechoices.com" target="_blank" style="color: #4A7A68;">Desactivar Publicidad UE</a></li>
+    </ul>
+
+    <h2>10. Actualizaciones de Esta Política</h2>
+    <p>Esta Política de Cookies puede actualizarse ocasionalmente para reflejar:</p>
+    <ul>
+      <li>Nuevas cookies o tecnologías que implementemos</li>
+      <li>Cambios en regulaciones de privacidad</li>
+      <li>Mejoras en nuestras prácticas de transparencia</li>
+    </ul>
+
+    <p>Los cambios importantes se notificarán mediante actualización de la fecha de "Última actualización" al inicio de esta página.</p>
+
+    <h2>11. Más Información y Contacto</h2>
+    <p>Si tienes preguntas sobre cómo usamos cookies:</p>
+
+    <ul>
+      <li>📧 <strong>Email:</strong> <a href="mailto:contacto@dognavi.org" style="color: #4A7A68;">contacto@dognavi.org</a></li>
+      <li>📄 <strong>Política de Privacidad:</strong> <a href="privacidad.html" style="color: #4A7A68;">Más detalles sobre tratamiento de datos</a></li>
+      <li>⚖️ <strong>Aviso Legal:</strong> <a href="aviso-legal.html" style="color: #4A7A68;">Términos y condiciones de uso</a></li>
+    </ul>
+
+    <h2>12. Recursos Adicionales</h2>
+    <p>Para aprender más sobre cookies y privacidad online:</p>
+    <ul>
+      <li><a href="https://www.allaboutcookies.org/es/" target="_blank" style="color: #4A7A68;">AllAboutCookies</a> - Guía completa sobre cookies</li>
+      <li><a href="https://ico.org.uk/for-the-public/online/cookies/" target="_blank" style="color: #4A7A68;">ICO (UK)</a> - Autoridad de protección de datos</li>
+      <li><a href="https://www.inai.org.mx" target="_blank" style="color: #4A7A68;">INAI (México)</a> - Instituto Nacional de Transparencia</li>
+    </ul>
+
+    <hr style="margin: 3rem 0; border: none; border-top: 2px solid #F4EDE4;">
+
+    <p style="text-align: center; color: #999; font-size: 0.9rem;">
+      <strong>Última revisión:</strong> 5 de Noviembre de 2025<br>
+      <strong>Versión:</strong> 1.0
+    </p>
+
+  </div>
+
+  <footer>
+    <p>© 2025 DogNavi · <a href="index.html">Volver al Inicio</a> · <a href="privacidad.html">Política de Privacidad</a></p>
+  </footer>
+
+</body>
+</html>
