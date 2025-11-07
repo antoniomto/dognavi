@@ -20,6 +20,7 @@
     body {
       font-family: 'Nunito', sans-serif;
       background-color: #F4EDE4;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%234A7A68' fill-opacity='0.08' fill-rule='evenodd'%3E%3Cpath d='M20 15c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5zm0-8c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM15 25c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm0-4c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zM25 25c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm0-4c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zM11 20c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm0-4c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zM29 20c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm0-4c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z'/%3E%3C/g%3E%3C/svg%3E");
       color: #333;
       line-height: 1.8;
     }
@@ -53,6 +54,11 @@
       gap: 0.5rem;
     }
 
+    .logo span {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
     nav a {
       color: white;
       text-decoration: none;
@@ -253,7 +259,10 @@
 
   <header>
     <div class="header-content">
-      <a href="index.html" class="logo">🐾 DogNavi</a>
+      <a href="index.html" class="logo">
+        <img src="images/dognavi_logo.png" alt="DogNavi Logo" style="height: 80px; width: auto;">
+        <span>DogNavi</span>
+      </a>
       <nav>
         <a href="index.html">Inicio</a>
         <a href="index.html#calculadora">Calculadora</a>
