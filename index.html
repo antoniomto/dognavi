@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- SEO Optimizado -->
@@ -32,12 +33,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   
   <!-- Google Analytics - REEMPLAZAR CON TU ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMK42FYHLQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+
+    gtag('config', 'G-SMK42FYHLQ');
   </script>
 
   <style>
@@ -138,13 +140,13 @@
     /* Trust Bar - Barra de Confianza */
     .trust-bar {
       background: linear-gradient(135deg, #FFB347 0%, #FFC974 100%);
-      padding: 0.8rem 2rem;
+      padding: 1rem 2rem;
       text-align: center;
       font-weight: 600;
       color: #333;
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 3rem;
       flex-wrap: wrap;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
@@ -152,9 +154,22 @@
     .trust-item {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.7rem;
     }
 
+    .trust-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background-color: #4A7A68;
+      color: white;
+      border-radius: 50%;
+      font-weight: 900;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
     /* Hero Section MEJORADO */
     .hero {
       background: url('images/banner.jpg') center/cover no-repeat;
@@ -811,9 +826,18 @@
 
   <!-- Trust Bar -->
   <div class="trust-bar">
-    <div class="trust-item">✅ 100% Gratis</div>
-    <div class="trust-item">✅ Sin Registro</div>
-    <div class="trust-item">✅ Resultados Instantáneos</div>
+    <div class="trust-item">
+      <span class="trust-icon">✓</span>
+      <span>100% Gratis</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">✓</span>
+      <span>Sin Registro</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">✓</span>
+      <span>Resultados Instantáneos</span>
+    </div>
   </div>
 
   <!-- Hero Section -->
@@ -1118,6 +1142,7 @@
   </footer>
 
   <!-- Popup de Salida -->
+  <!--
   <div class="exit-popup" id="exitPopup">
     <div class="popup-content">
       <span class="popup-close" onclick="closePopup()">&times;</span>
@@ -1129,6 +1154,7 @@
       </form>
     </div>
   </div>
+  -->
 
   <!-- JavaScript -->
   <script>
