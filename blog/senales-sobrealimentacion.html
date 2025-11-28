@@ -32,10 +32,13 @@
     }
 
     header {
-      background-color: #4A7A68;
+      background-color: #667e6d;
       padding: 1rem 5%;
       color: white;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .header-content {
@@ -88,7 +91,7 @@
     h1 {
       font-family: 'Poppins', sans-serif;
       font-size: 2.5rem;
-      color: #4A7A68;
+      color: #667e6d;
       margin-bottom: 1.5rem;
       line-height: 1.3;
     }
@@ -96,14 +99,14 @@
     h2 {
       font-family: 'Poppins', sans-serif;
       font-size: 1.8rem;
-      color: #4A7A68;
+      color: #667e6d;
       margin: 2.5rem 0 1rem;
     }
 
     h3 {
       font-family: 'Poppins', sans-serif;
       font-size: 1.4rem;
-      color: #4A7A68;
+      color: #667e6d;
       margin: 2rem 0 1rem;
     }
 
@@ -147,12 +150,12 @@
     }
 
     strong {
-      color: #4A7A68;
+      color: #667e6d;
       font-weight: 700;
     }
 
     .cta-box {
-      background: linear-gradient(135deg, #4A7A68 0%, #5a8a78 100%);
+      background: linear-gradient(135deg, #667e6d 0%, #5a8a78 100%);
       color: white;
       padding: 2.5rem;
       border-radius: 15px;
@@ -215,7 +218,7 @@
     }
 
     footer {
-      background-color: #4A7A68;
+      background-color: #667e6d;
       color: white;
       text-align: center;
       padding: 2rem;
@@ -247,20 +250,24 @@
 
   <header>
     <div class="header-content">
-      <a href="../index.html" class="logo">🐾 DogNavi</a>
+      <a href="../index.html" class="logo">
+        <img src="../images/dognavi_logo.png" alt="DogNavi" style="height: 80px; width: auto;">
+      </a>
       <nav>
+        <a href="../index.html#inicio">Inicio</a>
         <a href="../index.html#calculadora">Calculadora</a>
         <a href="../index.html#guias">Guías</a>
-        <a href="../index.html">Inicio</a>
+        <a href="../index.html#productos">Productos</a>
+        <a href="../index.html#testimonios">Testimonios</a>
       </nav>
     </div>
   </header>
 
   <article>
     <div class="article-meta">
-      <span>📅 Publicado: 3 de Noviembre, 2025</span>
+      <span>📅 Actualizado: Noviembre 2025</span>
       <span>⏱️ 5 min lectura</span>
-      <span>✍️ Por Dr. Martínez, Veterinario</span>
+      <span>📊 Basado en Estudios WSAVA</span>
     </div>
 
     <h1>5 Señales de que Tu Perro Come Demasiado (Y Cómo Solucionarlo en 7 Días)</h1>
@@ -351,7 +358,7 @@
 
     <h3>Día 3-4: Calcula y Ajusta</h3>
     <ul>
-      <li>Usa nuestra <a href="../index.html#calculadora" style="color: #4A7A68; font-weight: 700;">calculadora de alimentación</a></li>
+      <li>Usa nuestra <a href="../index.html#calculadora" style="color: #667e6d; font-weight: 700;">calculadora de alimentación</a></li>
       <li><strong>Reduce la porción en 15-20%</strong> si hay sobrepeso confirmado</li>
       <li>Cambia a alimento bajo en calorías (máximo 300 kcal/100g)</li>
       <li>Elimina TODOS los extras de mesa</li>
@@ -398,19 +405,19 @@
           <div class="emoji">⚖️</div>
           <strong>Báscula Digital</strong>
           <p>Precisión de 1g</p>
-          <a href="#" style="color: #4A7A68; text-decoration: none; font-weight: 700;">Ver en Amazon →</a>
+          <a href="#" style="color: #667e6d; text-decoration: none; font-weight: 700;">Ver en Amazon →</a>
         </div>
         <div class="product-item">
           <div class="emoji">🥣</div>
           <strong>Comedero Medidor</strong>
           <p>Porciones exactas</p>
-          <a href="#" style="color: #4A7A68; text-decoration: none; font-weight: 700;">Ver en Amazon →</a>
+          <a href="#" style="color: #667e6d; text-decoration: none; font-weight: 700;">Ver en Amazon →</a>
         </div>
         <div class="product-item">
           <div class="emoji">🥩</div>
           <strong>Alimento Low-Calorie</strong>
           <p>280 kcal/100g</p>
-          <a href="#" style="color: #4A7A68; text-decoration: none; font-weight: 700;">Ver en Amazon →</a>
+          <a href="#" style="color: #667e6d; text-decoration: none; font-weight: 700;">Ver en Amazon →</a>
         </div>
       </div>
       <p style="text-align: center; margin-top: 1rem; font-size: 0.8rem; color: #999;">* Enlaces de afiliado - Comprando a través de estos links apoyas a DogNavi sin costo extra</p>
@@ -427,13 +434,6 @@
       <p>Calcula gratis la alimentación perfecta para tu perro en 30 segundos</p>
       <a href="../index.html#calculadora" class="btn">Usar Calculadora Gratis</a>
     </div>
-
-    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #F4EDE4;">
-      <p style="font-size: 0.9rem; color: #999;">
-        <strong>Sobre el autor:</strong> Dr. Martínez es veterinario certificado con 12 años de experiencia en nutrición canina. Ha ayudado a más de 3,000 perros a alcanzar su peso ideal.
-      </p>
-    </div>
-
   </article>
 
   <footer>
@@ -445,20 +445,22 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "5 Señales de que Tu Perro Come Demasiado",
-    "author": {
-      "@type": "Person",
-      "name": "Dr. Martínez"
-    },
-    "datePublished": "2025-11-03",
+    "description": "Guía completa para identificar y corregir la sobrealimentación en perros",
     "image": "https://dognavi.org/images/sobrealimentacion-perros.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "DogNavi"
+    },
     "publisher": {
       "@type": "Organization",
       "name": "DogNavi",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://dognavi.org/logo.png"
+        "url": "https://dognavi.org/images/dognavi_logo.png"
       }
-    }
+    },
+    "datePublished": "2025-11-18",
+    "dateModified": "2025-11-18"
   }
   </script>
 

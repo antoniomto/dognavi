@@ -1,0 +1,541 @@
+/* ============================================
+   COMPONENTS.CSS — DogNavi Clean Premium Build
+   ============================================ */
+
+/* ----------------------------
+   TIPOGRAFÍA GENERAL DE COMPONENTES
+   ---------------------------- */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  margin: 0;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+  color: #555;
+  line-height: 1.55;
+}
+
+/* ----------------------------
+   BOTONES
+   ---------------------------- */
+
+/* Botón principal naranja */
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #FFB347, #FFC974);
+  color: #333 !important;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  transition: all .25s ease;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Botón secundario (ghost) */
+.btn-ghost {
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  border-radius: 50px;
+  border: 2px solid white;
+  color: white !important;
+  font-weight: 700;
+  font-size: 1rem;
+  background: transparent;
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* Botón secundario naranja pequeño */
+.btn-secondary {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #FFB347, #FFC974);
+  color: #333 !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all .25s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+}
+
+/* ----------------------------
+   CARDS GENERALES
+   ---------------------------- */
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* ----------------------------
+   TOOL CARDS (Herramientas)
+   ---------------------------- */
+
+.tool-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.tool-card-top {
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 65px;
+  color: white;
+}
+
+.tool-card-body {
+  padding: 2.2rem 1.8rem 2.6rem 1.8rem;
+  text-align: center;
+}
+
+.tool-card-body h3 {
+  font-size: 1.35rem;
+  color: #46584f;
+  margin-bottom: 1rem;
+}
+
+.tool-card-body p {
+  margin-bottom: 1.4rem;
+  color: #555;
+}
+
+.tool-card-body .btn-secondary,
+.tool-card-body button {
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+/* ----------------------------
+   PRODUCT CARDS
+   ---------------------------- */
+
+.products-grid {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.product-card {
+  background: white;
+  border-radius: 18px;
+  padding: 1.6rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform .25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-image {
+  font-size: 3rem;
+  margin-bottom: 0.7rem;
+}
+
+.product-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #46584f;
+}
+
+.product-price {
+  margin-top: 0.5rem;
+  color: #333;
+  font-weight: 800;
+}
+
+.affiliate-note {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 0.3rem;
+}
+
+/* ----------------------------
+   BLOG CARDS
+   ---------------------------- */
+
+.blog-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Meta */
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #6b6b6b;
+}
+
+/* Título */
+.blog-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #2f4a3e;
+  line-height: 1.3;
+}
+
+/* Descripción */
+.blog-desc {
+  color: #555;
+  line-height: 1.55;
+  font-size: 1rem;
+}
+
+/* Botón */
+.blog-btn {
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  display: inline-block;
+}
+.blog-section {
+  padding: 4rem 2rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----------------------------
+   CALCULADORA — FORM INPUTS
+   ---------------------------- */
+
+/* ============================================
+   CALCULADORA PREMIUM DOGNAVI
+   ============================================ */
+
+.calculator-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ---- Labels ---- */
+.calculator-container label {
+  font-weight: 700;
+  color: #213a30;
+  margin-bottom: .4rem;
+  display: block;
+}
+
+/* ---- Inputs ---- */
+.calculator-container input,
+.calculator-container select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #dedede;
+  background: #fff;
+  margin-bottom: 1.5rem;
+  transition: 0.25s ease;
+}
+
+.calculator-container input::placeholder {
+  color: #b9b9b9;
+}
+
+.calculator-container input:focus,
+.calculator-container select:focus {
+  border-color: #667e6d;
+  box-shadow: 0 0 0 3px rgba(102, 126, 109, 0.25);
+}
+
+/* ---- Steps ---- */
+.calculator-step {
+  margin-bottom: 1.8rem;
+}
+
+/* ---- Botón Calcular ---- */
+#calculateBtn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* ============================================
+   RESULTADO
+   ============================================ */
+
+#result {
+  background: #5f7263;
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+  display: none;
+}
+
+#result h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.result-box {
+  background: rgba(255,255,255,0.12);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+
+/* ----------------------------
+   CALCULADORA — RESULTADO
+   ---------------------------- */
+
+#result {
+  display: none;
+  margin-top: 2rem;
+  background-color: #667e6d;
+  border-radius: 24px;
+  padding: 2.2rem 2.5rem;
+  color: #f5f7f5;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#result h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+#result .result-detail {
+  background: rgba(255,255,255,0.10);
+  border-radius: 12px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.98rem;
+}
+
+#result .result-detail strong {
+  color: #FFE39A;
+  font-weight: 700;
+}
+
+#result .btn-primary {
+  margin-top: 1.5rem;
+}
+
+/* ----------------------------
+   ANIMACIONES — REVEAL
+   ---------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================
+   TRUST CARDS (POR QUÉ CONFIAR)
+   ============================= */
+
+.trust-cards {
+  gap: 2rem;
+}
+
+.trust-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  border-left: 6px solid #f0b35a;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: .25s;
+}
+
+.trust-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.trust-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.trust-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1f362f;
+  margin-bottom: 0.5rem;
+}
+
+.trust-card p {
+  color: #444;
+  line-height: 1.55;
+}
+
+/* =============================
+   HERRAMIENTAS ÚTILES
+   ============================= */
+/* ================================
+   Tools – Premium Cards
+================================ */
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+/* Card */
+.tool-card {
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease;
+  min-height: 380px;
+}
+
+.tool-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Header con color sólido */
+.tool-thumb-area {
+  height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb-orange { background: #F3AF4B; }
+.thumb-green  { background: #56735A; }
+.thumb-blue   { background: #8AB4E0; }
+
+/* Emoji */
+.tool-emoji {
+  font-size: 65px;
+  line-height: 1;
+}
+
+/* Body */
+.tool-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  flex-grow: 1;
+}
+
+/* Títulos */
+.tool-body h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #2f4a3e;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Descripción */
+.tool-body p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Botón premium */
+.tool-body .btn-primary {
+  margin-top: auto;
+  border-radius: 50px;
+  padding: 0.9rem 1.8rem;
+  text-align: center;
+}
+
+/* Botón disabled */
+.btn-primary.disabled {
+  opacity: 0.5;
+  cursor: default;
+}

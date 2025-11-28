@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+      <loc>https://dognavi.org/</loc>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>https://dognavi.org/calculadora-alimentacion</loc>
+      <priority>0.95</priority>
+   </url>
+
+   <url>
+      <loc>https://dognavi.org/salud</loc>
+      <priority>0.95</priority>
+   </url>
+
+   <url>
+      <loc>https://dognavi.org/guias</loc>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://dognavi.org/productos</loc>
+      <priority>0.7</priority>
+   </url>
+
+   <url>
+      <loc>https://dognavi.org/sobre</loc>
+      <priority>0.5</priority>
+   </url>
+
+   <url>
+      <loc>https://dognavi.org/aviso-legal</loc>
+      <priority>0.3</priority>
+   </url>
+
+   <url>
+      <loc>https://dognavi.org/privacidad</loc>
+      <priority>0.3</priority>
+   </url>
+
+   <url>
+      <loc>https://dognavi.org/cookies</loc>
+      <priority>0.3</priority>
+   </url>
+
+</urlset>

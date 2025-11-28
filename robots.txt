@@ -1,18 +1,15 @@
-# robots.txt para DogNavi
-
 User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+# Bloquear páginas internas que NO deben indexarse
+Disallow: /wp-json/
+Disallow: /?s=
+Disallow: /search/
+Disallow: /tag/
+
+# Asegura indexación correcta del sitio
 Allow: /
 
-# Sitemap
-Sitemap: https://dognavi.org/sitemap.xml
-
-# Bloquear archivos del sistema (si los tuvieras)
-Disallow: /cgi-bin/
-Disallow: /tmp/
-Disallow: /admin/
-
-# Permitir crawling de imágenes
-Allow: /images/
-
-# Permitir crawling de blog
-Allow: /blog/
+# Enlace al sitemap
+Sitemap: https://dognavi.org/sitemap_index.xml
