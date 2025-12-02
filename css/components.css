@@ -3,7 +3,7 @@
    ============================================ */
 
 /* ----------------------------
-   TIPOGRAFÍA GENERAL DE COMPONENTES
+   TIPOGRAFÍA GENERAL
    ---------------------------- */
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
@@ -21,7 +21,6 @@ p {
    BOTONES
    ---------------------------- */
 
-/* Botón principal naranja */
 .btn-primary {
   display: inline-block;
   padding: 1rem 2rem;
@@ -48,7 +47,7 @@ p {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* Botón secundario (ghost) */
+/* Botón ghost */
 .btn-ghost {
   display: inline-block;
   padding: 1rem 2.2rem;
@@ -66,7 +65,7 @@ p {
   background: rgba(255,255,255,0.18);
 }
 
-/* Botón secundario naranja pequeño */
+/* Botón secundario */
 .btn-secondary {
   display: inline-block;
   padding: 0.9rem 1.6rem;
@@ -100,7 +99,7 @@ p {
 }
 
 /* ----------------------------
-   TOOL CARDS (Herramientas)
+   TOOL CARDS
    ---------------------------- */
 
 .tool-card {
@@ -148,7 +147,7 @@ p {
 }
 
 /* ----------------------------
-   PRODUCT CARDS
+   PRODUCT CARDS — (VERSIÓN PRO)
    ---------------------------- */
 
 .products-grid {
@@ -156,43 +155,65 @@ p {
   margin: 2rem auto;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+/* Card principal */
 .product-card {
   background: white;
-  border-radius: 18px;
-  padding: 1.6rem;
+  border-radius: 20px;
+  padding: 1.8rem;
   text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   transition: transform .25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
   transform: translateY(-6px);
 }
 
+/* Imagen con altura consistente */
 .product-image {
-  font-size: 3rem;
-  margin-bottom: 0.7rem;
+  width: 100%;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Título */
 .product-title {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #46584f;
-}
-
-.product-price {
-  margin-top: 0.5rem;
-  color: #333;
   font-weight: 800;
+  font-size: 1.15rem;
+  color: #2f4a3e;
+  margin: 0.6rem 0 0.3rem;
 }
 
-.affiliate-note {
-  font-size: 0.75rem;
-  opacity: 0.7;
-  margin-top: 0.3rem;
+/* Descripción */
+.product-card p {
+  font-size: 0.95rem;
+  color: #555;
+  min-height: 40px;
+  margin: 0 0 1rem;
+}
+
+/* Precio */
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 /* ----------------------------
@@ -226,7 +247,6 @@ p {
   gap: 1rem;
 }
 
-/* Meta */
 .blog-meta {
   display: flex;
   justify-content: space-between;
@@ -234,7 +254,6 @@ p {
   color: #6b6b6b;
 }
 
-/* Título */
 .blog-title {
   font-size: 1.35rem;
   font-weight: 800;
@@ -242,14 +261,12 @@ p {
   line-height: 1.3;
 }
 
-/* Descripción */
 .blog-desc {
   color: #555;
   line-height: 1.55;
   font-size: 1rem;
 }
 
-/* Botón */
 .blog-btn {
   margin: 0 auto;
   margin-top: 1rem;
@@ -257,6 +274,7 @@ p {
   border-radius: 50px;
   display: inline-block;
 }
+
 .blog-section {
   padding: 4rem 2rem;
 }
@@ -272,12 +290,8 @@ p {
 }
 
 /* ----------------------------
-   CALCULADORA — FORM INPUTS
+   CALCULADORA — FORMULARIO
    ---------------------------- */
-
-/* ============================================
-   CALCULADORA PREMIUM DOGNAVI
-   ============================================ */
 
 .calculator-container {
   max-width: 900px;
@@ -288,7 +302,6 @@ p {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* ---- Labels ---- */
 .calculator-container label {
   font-weight: 700;
   color: #213a30;
@@ -296,7 +309,6 @@ p {
   display: block;
 }
 
-/* ---- Inputs ---- */
 .calculator-container input,
 .calculator-container select {
   width: 100%;
@@ -316,46 +328,17 @@ p {
 .calculator-container input:focus,
 .calculator-container select:focus {
   border-color: #667e6d;
-  box-shadow: 0 0 0 3px rgba(102, 126, 109, 0.25);
+  box-shadow: 0 0 0 3px rgba(102,126,109,0.25);
 }
 
-/* ---- Steps ---- */
 .calculator-step {
   margin-bottom: 1.8rem;
 }
 
-/* ---- Botón Calcular ---- */
 #calculateBtn {
   width: 100%;
   margin-top: 1rem;
 }
-
-/* ============================================
-   RESULTADO
-   ============================================ */
-
-#result {
-  background: #5f7263;
-  color: white;
-  padding: 2rem;
-  border-radius: 20px;
-  margin-top: 2rem;
-  display: none;
-}
-
-#result h3 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-
-.result-box {
-  background: rgba(255,255,255,0.12);
-  padding: 1rem;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
 
 /* ----------------------------
    CALCULADORA — RESULTADO
@@ -413,9 +396,9 @@ p {
   transform: translateY(0);
 }
 
-/* =============================
-   TRUST CARDS (POR QUÉ CONFIAR)
-   ============================= */
+/* ----------------------------
+   TRUST CARDS
+   ---------------------------- */
 
 .trust-cards {
   gap: 2rem;
@@ -452,12 +435,9 @@ p {
   line-height: 1.55;
 }
 
-/* =============================
-   HERRAMIENTAS ÚTILES
-   ============================= */
-/* ================================
-   Tools – Premium Cards
-================================ */
+/* ----------------------------
+   TOOLS GRID
+   ---------------------------- */
 
 .tools-grid {
   display: grid;
@@ -466,7 +446,7 @@ p {
   margin-top: 2rem;
 }
 
-/* Card */
+/* Tools cards */
 .tool-card {
   background: #ffffff;
   border-radius: 22px;
@@ -482,7 +462,6 @@ p {
   transform: translateY(-6px);
 }
 
-/* Header con color sólido */
 .tool-thumb-area {
   height: 135px;
   display: flex;
@@ -494,13 +473,11 @@ p {
 .thumb-green  { background: #56735A; }
 .thumb-blue   { background: #8AB4E0; }
 
-/* Emoji */
 .tool-emoji {
   font-size: 65px;
   line-height: 1;
 }
 
-/* Body */
 .tool-body {
   padding: 2rem;
   display: flex;
@@ -509,32 +486,25 @@ p {
   flex-grow: 1;
 }
 
-/* Títulos */
 .tool-body h3 {
   font-size: 1.35rem;
   font-weight: 800;
   color: #2f4a3e;
-  margin: 0;
-  line-height: 1.3;
 }
 
-/* Descripción */
 .tool-body p {
   color: #555;
   font-size: 1rem;
   line-height: 1.55;
-  margin: 0;
 }
 
-/* Botón premium */
 .tool-body .btn-primary {
   margin-top: auto;
   border-radius: 50px;
   padding: 0.9rem 1.8rem;
-  text-align: center;
 }
 
-/* Botón disabled */
+/* Disabled */
 .btn-primary.disabled {
   opacity: 0.5;
   cursor: default;

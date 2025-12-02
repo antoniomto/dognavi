@@ -3,608 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO -->
   <title>Rutina Express para tu Perro - Genera en 10 Segundos | DogNavi</title>
   <meta name="description" content="Genera una rutina de ejercicio personalizada para tu perro en 10 segundos. Actividades de 5-20 minutos según energía, espacio y tiempo disponible.">
-  <meta name="keywords" content="rutina perro, ejercicios perro casa, actividades perro, juegos perro departamento">
   <link rel="canonical" href="https://dognavi.org/tools/rutina-express.html">
-  
-  <!-- Fonts -->
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-  
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    body {
-      font-family: 'Nunito', sans-serif;
-      background-color: #F4EDE4;
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%234A7A68' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M20 15c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5zm0-8c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z'/%3E%3C/g%3E%3C/svg%3E");
-      color: #333;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    /* Header */
-    header {
-      background-color: #667e6d;
-      padding: 1rem 5%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .header-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .logo img {
-      height: 80px;
-      width: auto;
-    }
-
-    .logo-text {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: white;
-      margin-left: 0.5rem;
-      display: none;
-    }
-
-    /* Mostrar texto si imagen no carga */
-    .logo img:not([src]), .logo img[src=""] {
-      display: none;
-    }
-
-    nav {
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #FFB347;
-    }
-
-    /* Container */
-    .container {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 2rem;
-    }
-
-    /* Hero */
-    .hero {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .hero h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
-      color: #4A7A68;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #666;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero .badge {
-      display: inline-block;
-      background: #FFB347;
-      color: #333;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-top: 1rem;
-    }
-
-    /* Questions Section */
-    .questions-section {
-      background: white;
-      border-radius: 20px;
-      padding: 2.5rem;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-    }
-
-    .question-group {
-      margin-bottom: 2rem;
-    }
-
-    .question-group:last-child {
-      margin-bottom: 0;
-    }
-
-    .question-group h3 {
-      font-family: 'Poppins', sans-serif;
-      color: #4A7A68;
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .question-group .emoji {
-      font-size: 1.5rem;
-    }
-
-    .options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1rem;
-    }
-
-    .option-btn {
-      background: #F4EDE4;
-      border: 2px solid #e0e0e0;
-      padding: 1.2rem;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.3s;
-      text-align: center;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    .option-btn:hover {
-      border-color: #4A7A68;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(74, 122, 104, 0.2);
-    }
-
-    .option-btn.selected {
-      background: #4A7A68;
-      color: white;
-      border-color: #4A7A68;
-    }
-
-    .option-btn .icon {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    /* Generate Button */
-    .generate-btn {
-      width: 100%;
-      background: linear-gradient(135deg, #FFB347 0%, #FFC974 100%);
-      color: #333;
-      border: none;
-      padding: 1.2rem 2rem;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      font-weight: 800;
-      cursor: pointer;
-      margin-top: 2rem;
-      transition: all 0.3s;
-      box-shadow: 0 4px 15px rgba(255, 179, 71, 0.4);
-    }
-
-    .generate-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(255, 179, 71, 0.5);
-    }
-
-    .generate-btn:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    /* Result Section */
-    .result-section {
-      display: none;
-      background: white;
-      border-radius: 20px;
-      padding: 2.5rem;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-      animation: fadeInUp 0.5s ease;
-    }
-
-    .result-section.show {
-      display: block;
-    }
-
-    .result-header {
-      text-align: center;
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 2px solid #F4EDE4;
-    }
-
-    .result-header h2 {
-      font-family: 'Poppins', sans-serif;
-      color: #4A7A68;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .result-header .subtitle {
-      font-size: 1.1rem;
-      color: #666;
-      font-weight: 600;
-    }
-
-    .routine-steps {
-      margin: 2rem 0;
-    }
-
-    .step {
-      background: #F4EDE4;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      border-left: 4px solid #FFB347;
-      transition: transform 0.3s;
-    }
-
-    .step:hover {
-      transform: translateX(5px);
-    }
-
-    .step-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .step-number {
-      background: #FFB347;
-      color: #333;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
-    .step-duration {
-      background: white;
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: #4A7A68;
-    }
-
-    .step-title {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #333;
-    }
-
-    .step-description {
-      color: #666;
-      line-height: 1.6;
-      margin-left: 3rem;
-    }
-
-    /* Tip Box */
-    .tip-box {
-      background: linear-gradient(135deg, #4A7A68 0%, #5a8a78 100%);
-      color: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin: 2rem 0;
-    }
-
-    .tip-box strong {
-      display: block;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* CTA Box */
-    .cta-box {
-      background: linear-gradient(135deg, #FFB347 0%, #FFC974 100%);
-      padding: 2rem;
-      border-radius: 15px;
-      text-align: center;
-      margin: 2rem 0;
-    }
-
-    .cta-box h3 {
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      background: white;
-      color: #4A7A68;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 700;
-      margin: 0.5rem;
-      transition: 0.3s;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    }
-
-    .btn-secondary {
-      display: inline-block;
-      background: transparent;
-      color: #333;
-      border: 2px solid #333;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 700;
-      margin: 0.5rem;
-      transition: 0.3s;
-    }
-
-    .btn-secondary:hover {
-      background: #333;
-      color: white;
-    }
-
-    /* Products */
-    .products {
-      margin: 2rem 0;
-    }
-
-    .products h4 {
-      font-family: 'Poppins', sans-serif;
-      color: #4A7A68;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .product-card {
-      background: #F4EDE4;
-      padding: 1.5rem;
-      border-radius: 12px;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .product-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .product-name {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #333;
-    }
-
-    .product-link {
-      display: inline-block;
-      background: #FFB347;
-      color: #333;
-      padding: 0.6rem 1.2rem;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      transition: 0.3s;
-    }
-
-    .product-link:hover {
-      background: #FFC974;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #4A7A68;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 4rem;
-    }
-
-    footer a {
-      color: #FFB347;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .questions-section {
-        padding: 1.5rem;
-      }
-
-      .options {
-        grid-template-columns: 1fr;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .container {
-        padding: 0 1rem;
-      }
-    }
-  </style>
+  <!-- CSS GLOBAL (MISMO DEL INDEX) -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/footer.css">
+
+  <!-- CSS ÚNICO DE ESTA HERRAMIENTA -->
+  <link rel="stylesheet" href="../css/rutina.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5553318622247823"
+     crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="header-content">
-      <a href="../index.html" class="logo">
-        <img src="../images/dognavi_logo.png" alt="DogNavi" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span class="logo-text" style="display: none;">🐾 DogNavi</span>
-      </a>
-      <nav>
-        <a href="../index.html#inicio">Inicio</a>
-        <a href="../index.html#calculadora">Calculadora</a>
-        <a href="../index.html#guias">Guías</a>
-        <a href="../index.html#productos">Productos</a>
-        <a href="../index.html#testimonios">Testimonios</a>
-      </nav>
-    </div>
-  </header>
+  <!-- HEADER GLOBAL -->
+  <div id="header"></div>
+  <script>
+    const basePath = window.location.pathname.includes("/tools/") || 
+                    window.location.pathname.includes("/blog/")
+                    ? "../"
+                    : "";
 
-  <!-- Container -->
-  <div class="container">
-    
-    <!-- Hero -->
-    <div class="hero">
+    fetch(basePath + "partials/header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("header").innerHTML = html;
+
+        // Reejecutar el script del menú (porque el HTML fue inyectado dinámicamente)
+        const script = document.createElement("script");
+        script.src = basePath + "js/menu.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <main class="container pt-3">
+
+    <!-- HERO -->
+    <div class="hero-rutina">
       <h1>🏃‍♂️ Generador de Rutina Express</h1>
-      <p>Crea una rutina personalizada para tu perro en 10 segundos</p>
+      <p>Crea una rutina personalizada para tu perro en solo 10 segundos</p>
       <span class="badge">✨ Sin registro • Resultado inmediato</span>
     </div>
 
-    <!-- Questions Section -->
+    <!-- SECCIÓN DE PREGUNTAS -->
     <div class="questions-section" id="questionsSection">
       
-      <!-- Question 1: Energía -->
+      <!-- Pregunta: Energía -->
       <div class="question-group">
         <h3><span class="emoji">⚡</span> Nivel de Energía de tu Perro</h3>
         <div class="options">
           <button class="option-btn" data-question="energia" data-value="baja">
-            <span class="icon">😴</span>
-            Baja
+            <span class="icon">😴</span>Baja
           </button>
           <button class="option-btn" data-question="energia" data-value="media">
-            <span class="icon">🙂</span>
-            Media
+            <span class="icon">🙂</span>Media
           </button>
           <button class="option-btn" data-question="energia" data-value="alta">
-            <span class="icon">🔥</span>
-            Alta
+            <span class="icon">🔥</span>Alta
           </button>
         </div>
       </div>
 
-      <!-- Question 2: Espacio -->
+      <!-- Pregunta: Espacio -->
       <div class="question-group">
         <h3><span class="emoji">🏠</span> Espacio Disponible</h3>
         <div class="options">
           <button class="option-btn" data-question="espacio" data-value="departamento">
-            <span class="icon">🏢</span>
-            Departamento
+            <span class="icon">🏢</span>Departamento
           </button>
           <button class="option-btn" data-question="espacio" data-value="patio">
-            <span class="icon">🏡</span>
-            Casa con Patio
+            <span class="icon">🏡</span>Casa con Patio
           </button>
           <button class="option-btn" data-question="espacio" data-value="parque">
-            <span class="icon">🌳</span>
-            Acceso a Parque
+            <span class="icon">🌳</span>Acceso a Parque
           </button>
         </div>
       </div>
 
-      <!-- Question 3: Tiempo -->
+      <!-- Pregunta: Tiempo -->
       <div class="question-group">
         <h3><span class="emoji">⏱️</span> Tiempo Disponible</h3>
         <div class="options">
           <button class="option-btn" data-question="tiempo" data-value="5">
-            <span class="icon">⏰</span>
-            5 minutos
+            <span class="icon">⏰</span>5 minutos
           </button>
           <button class="option-btn" data-question="tiempo" data-value="10">
-            <span class="icon">⏱️</span>
-            10 minutos
+            <span class="icon">⏱️</span>10 minutos
           </button>
           <button class="option-btn" data-question="tiempo" data-value="20">
-            <span class="icon">⏲️</span>
-            20 minutos
+            <span class="icon">⏲️</span>20 minutos
           </button>
         </div>
       </div>
 
-      <!-- Generate Button -->
       <button class="generate-btn" id="generateBtn" disabled>
         🎯 Generar Mi Rutina Express
       </button>
     </div>
 
-    <!-- Result Section -->
+    <!-- RESULTADO -->
     <div class="result-section" id="resultSection">
       <div class="result-header">
         <h2 id="resultTitle">Tu Rutina Express</h2>
         <p class="subtitle" id="resultSubtitle"></p>
       </div>
 
-      <div class="routine-steps" id="routineSteps">
-        <!-- Steps will be generated dynamically -->
-      </div>
+      <div class="routine-steps" id="routineSteps"></div>
+      <div class="tip-box" id="tipBox"></div>
 
-      <div class="tip-box" id="tipBox">
-        <!-- Tip will be generated dynamically -->
-      </div>
-
-      <!-- Products -->
-      <div class="products" id="productsSection">
-        <h4>🛒 Productos Recomendados para Esta Rutina</h4>
-        <div class="product-grid" id="productGrid">
-          <!-- Products will be generated dynamically -->
-        </div>
+      <!-- Productos -->
+      <div class="products">
+        <h4>🛒 Productos Recomendados</h4>
+        <div class="product-grid" id="productGrid"></div>
       </div>
 
       <!-- CTA -->
@@ -615,466 +137,22 @@
       </div>
     </div>
 
-  </div>
+  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 DogNavi · <a href="../index.html">Volver al Inicio</a></p>
-  </footer>
-
-  <!-- JavaScript -->
+  <!-- FOOTER GLOBAL -->
+  <div id="footer"></div>
   <script>
-    // State
-    const state = {
-      energia: null,
-      espacio: null,
-      tiempo: null
-    };
-
-    // Database de rutinas
-    const routines = {
-      // Energía Alta
-      'alta-departamento-5': {
-        title: 'Explosión Mental Express',
-        steps: [
-          { duration: 2, title: 'Juego de Olfato Rápido', description: 'Esconde 3 premios en lugares visibles. Deja que los encuentre rápidamente para activar su cerebro.' },
-          { duration: 2, title: 'Comandos de Alta Energía', description: 'Secuencia: Sentado → Quieto → Giro → Pata. Repite 3 veces con entusiasmo.' },
-          { duration: 1, title: 'Respiración y Calma', description: 'Termina con caricias lentas y respiración tranquila para bajar revoluciones.' }
-        ],
-        tip: '💡 Repite esta rutina 2-3 veces al día para quemar energía mental sin salir de casa.',
-        products: ['juguete-mental', 'alfombra-olfativa', 'dispensador']
-      },
-      'alta-departamento-10': {
-        title: 'Circuito Indoor Intenso',
-        steps: [
-          { duration: 2, title: 'Calentamiento con Juego de Toalla', description: 'Enrolla una toalla con premios dentro. Que tu perro la desenrolle trabajando con las patas.' },
-          { duration: 4, title: 'Búsqueda de Premios en 3 Zonas', description: 'Esconde premios en sala, cocina y habitación. Envía a tu perro a buscarlos uno por uno con comando.' },
-          { duration: 3, title: 'Mini Circuito: Puerta → Mesa → Sillón', description: 'Guía a tu perro en circuito: toca la puerta, pasa bajo la mesa, sube al sillón. Repite 2 veces.' },
-          { duration: 1, title: 'Enfriamiento con Comando Simple', description: 'Practica "quieto" durante 60 segundos para calmar la mente.' }
-        ],
-        tip: '🎯 Si haces esto 3 veces por semana, reducirás ansiedad por separación hasta 40%.',
-        products: ['juguete-mental', 'alfombra-olfativa', 'dispensador']
-      },
-      'alta-departamento-20': {
-        title: 'Sesión Completa Indoor',
-        steps: [
-          { duration: 3, title: 'Calentamiento Mental', description: 'Juego de "¿Dónde está?" con 5 escondites progresivamente difíciles.' },
-          { duration: 6, title: 'Circuito de Obstáculos Casero', description: 'Crea recorrido con sillas, cajas, cojines. Guía con premios. Repite 3 veces aumentando velocidad.' },
-          { duration: 5, title: 'Juego de Tira y Afloja Controlado', description: 'Usa cuerda o juguete. Alterna entre tirar y soltar con comando. Trabaja impulso control.' },
-          { duration: 4, title: 'Sesión de Comandos Avanzados', description: 'Practica: giro, reversa, pata, muerto, busca objeto específico.' },
-          { duration: 2, title: 'Masaje y Relajación Final', description: 'Masaje suave en pecho, cuello y orejas. Música relajante opcional.' }
-        ],
-        tip: '🏆 Esta rutina equivale a 45 min de paseo en términos de cansancio mental. Úsala en días lluviosos.',
-        products: ['juguete-mental', 'alfombra-olfativa', 'cuerda-tira']
-      },
-      'alta-patio-5': {
-        title: 'Sprint y Recuperación',
-        steps: [
-          { duration: 3, title: 'Carreras Cortas', description: '3 sprints de punta a punta del patio. Tú corres también para motivar.' },
-          { duration: 2, title: 'Búsqueda Rápida', description: 'Lanza juguete 5 veces. Que lo traiga de vuelta cada vez.' }
-        ],
-        tip: '⚡ Perfecto para quemar energía explosiva antes de entrar a casa.',
-        products: ['pelota-resistente', 'frisbee']
-      },
-      'alta-patio-10': {
-        title: 'Circuito al Aire Libre',
-        steps: [
-          { duration: 2, title: 'Calentamiento con Comandos', description: 'Sentado, quieto, ven, repite en diferentes esquinas del patio.' },
-          { duration: 5, title: 'Juego de Fetch Intensivo', description: 'Lanza pelota o frisbee 15 veces. Varía distancias y direcciones.' },
-          { duration: 2, title: 'Saltos Sobre Obstáculos', description: 'Usa bancos, troncos o cajas. 5 saltos controlados.' },
-          { duration: 1, title: 'Respiración y Agua', description: 'Hidratar y respiraciones profundas sentado.' }
-        ],
-        tip: '🌤️ Hazlo temprano en la mañana o tarde para evitar calor extremo.',
-        products: ['frisbee', 'pelota-resistente', 'obstaculos']
-      },
-      'alta-patio-20': {
-        title: 'Sesión Deportiva Completa',
-        steps: [
-          { duration: 3, title: 'Calentamiento Progresivo', description: 'Camina, trota, corre en círculos del patio. Aumenta velocidad gradualmente.' },
-          { duration: 7, title: 'Circuito de Agilidad', description: 'Crea recorrido: saltos, slalom entre postes, túnel improvisado. 4 repeticiones.' },
-          { duration: 5, title: 'Fetch con Variaciones', description: 'Lanza pelota: lejos, cerca, alto, bajo. Alterna con comandos "espera" antes de ir.' },
-          { duration: 3, title: 'Juego de Escondite', description: 'Escóndete en el patio. Llama a tu perro y que te encuentre. Repite 3 veces.' },
-          { duration: 2, title: 'Enfriamiento y Estiramiento', description: 'Camina lento, estira patas suavemente, masaje en pecho.' }
-        ],
-        tip: '💪 Esta rutina es equivalente a 1 hora de paseo normal. Ideal para perros deportistas.',
-        products: ['set-agilidad', 'frisbee', 'pelota-resistente']
-      },
-
-      // Energía Alta - Parque
-      'alta-parque-5': {
-        title: 'Sprint Explosivo',
-        steps: [
-          { duration: 3, title: 'Carrera Libre', description: 'Deja que corra a máxima velocidad en zona segura. Tú también corre para motivar.' },
-          { duration: 2, title: 'Recuperación Activa', description: 'Camina lento mientras practica comando "junto".' }
-        ],
-        tip: '🏃 Perfecto para antes de entrar a casa y evitar hiperactividad.',
-        products: ['correa-larga', 'pelota-resistente']
-      },
-      'alta-parque-10': {
-        title: 'Aventura Acelerada',
-        steps: [
-          { duration: 2, title: 'Trote de Calentamiento', description: 'Inicia con trote moderado por 2 minutos para preparar músculos.' },
-          { duration: 5, title: 'Fetch con Intervalos', description: 'Lanza pelota 10 veces. Alterna lanzamientos largos y cortos.' },
-          { duration: 2, title: 'Exploración Olfativa', description: 'Deja que olfatee libremente una zona nueva del parque.' },
-          { duration: 1, title: 'Respiración Final', description: 'Sentado, respiraciones tranquilas, caricias.' }
-        ],
-        tip: '🎾 Usa pelota con cuerda para lanzar más lejos sin esfuerzo.',
-        products: ['pelota-cuerda', 'frisbee', 'correa-larga']
-      },
-      'alta-parque-20': {
-        title: 'Sesión Deportiva Completa',
-        steps: [
-          { duration: 4, title: 'Calentamiento Dinámico', description: 'Camina 2 min, trota 2 min. Varía ritmo para preparar cuerpo.' },
-          { duration: 8, title: 'Fetch Intensivo con Comandos', description: 'Lanza 20 veces. Alterna con comandos: espera, ven, suelta. Trabaja control de impulsos.' },
-          { duration: 4, title: 'Socialización y Juego Libre', description: 'Si hay perros seguros, permite juego supervisado. Si no, exploración libre.' },
-          { duration: 3, title: 'Circuito Natural', description: 'Usa elementos del parque: salta troncos, sube escaleras, camina sobre bancos.' },
-          { duration: 1, title: 'Enfriamiento y Agua', description: 'Camina lento, hidratar, respiraciones tranquilas.' }
-        ],
-        tip: '🌟 Esta es la rutina perfecta para perros deportistas. Hazla 3-4 veces por semana.',
-        products: ['frisbee', 'pelota-resistente', 'botella-agua-portatil']
-      },
-
-      // Energía Media
-      'media-departamento-5': {
-        title: 'Estimulación Suave',
-        steps: [
-          { duration: 3, title: 'Juego de Olfato Básico', description: 'Esconde 3 premios en lugares fáciles. Guía con comando "busca".' },
-          { duration: 2, title: 'Comandos Simples', description: 'Practica sentado, pata, quieto. 3 repeticiones cada uno.' }
-        ],
-        tip: '✨ Ideal para días ocupados. Mantiene mente activa en poco tiempo.',
-        products: ['juguete-mental', 'dispensador']
-      },
-      'media-departamento-10': {
-        title: 'Equilibrio Mental',
-        steps: [
-          { duration: 3, title: 'Alfombra Olfativa', description: 'Esparce premios en alfombra olfativa o toalla. Deja que busque durante 3 minutos.' },
-          { duration: 4, title: 'Juego de "¿Dónde está?"', description: 'Esconde juguete favorito en 4 lugares progresivamente difíciles.' },
-          { duration: 2, title: 'Masticación Productiva', description: 'Dale juguete masticable o hueso seguro para relajar.' },
-          { duration: 1, title: 'Caricias y Calma', description: 'Termina con caricias suaves y palabras tranquilas.' }
-        ],
-        tip: '🧘 Combina estimulación mental con relajación. Perfecto para perros balanceados.',
-        products: ['alfombra-olfativa', 'kong-rellenable', 'juguete-masticable']
-      },
-      'media-departamento-20': {
-        title: 'Sesión Completa Balanceada',
-        steps: [
-          { duration: 5, title: 'Calentamiento Mental', description: 'Alfombra olfativa + búsqueda de premios en 5 zonas diferentes.' },
-          { duration: 6, title: 'Comandos y Tricks', description: 'Practica: sentado, pata, giro, reversa, alto, busca. 2 series completas.' },
-          { duration: 5, title: 'Juego Moderado de Tira y Afloja', description: 'Usa juguete suave. Alterna entre tirar y soltar con comando.' },
-          { duration: 3, title: 'Enriquecimiento Ambiental', description: 'Mueve muebles, crea "obstáculos" nuevos, esconde objetos diferentes.' },
-          { duration: 1, title: 'Relajación Guiada', description: 'Masaje suave, música tranquila, respiración sincronizada.' }
-        ],
-        tip: '⚖️ Esta rutina mantiene equilibrio perfecto entre actividad y calma.',
-        products: ['alfombra-olfativa', 'kong-rellenable', 'juguete-suave']
-      },
-      'media-patio-5': {
-        title: 'Paseo Corto Activo',
-        steps: [
-          { duration: 3, title: 'Exploración Guiada', description: 'Camina por el patio dejando que olfatee 3 puntos específicos.' },
-          { duration: 2, title: 'Fetch Moderado', description: 'Lanza pelota 5 veces. Ritmo tranquilo.' }
-        ],
-        tip: '🍃 Perfecto para media mañana o media tarde.',
-        products: ['pelota-suave']
-      },
-      'media-patio-10': {
-        title: 'Exploración y Juego',
-        steps: [
-          { duration: 3, title: 'Caminata de Reconocimiento', description: 'Explora el patio en ritmo moderado. Detente en puntos de interés.' },
-          { duration: 4, title: 'Fetch con Pausas', description: 'Lanza pelota 8 veces. Entre lanzamientos practica "sentado" o "quieto".' },
-          { duration: 2, title: 'Búsqueda de Objetos', description: 'Esconde 3 juguetes en el patio. Que los encuentre uno por uno.' },
-          { duration: 1, title: 'Descanso y Agua', description: 'Hidratar y respirar tranquilo.' }
-        ],
-        tip: '🌿 Combina ejercicio físico moderado con estimulación mental.',
-        products: ['pelota-suave', 'juguetes-varios']
-      },
-      'media-patio-20': {
-        title: 'Rutina Completa Moderada',
-        steps: [
-          { duration: 5, title: 'Calentamiento Exploratorio', description: 'Camina por todo el patio. Olfatea, investiga, reconoce territorio.' },
-          { duration: 6, title: 'Fetch y Comandos Combinados', description: 'Lanza 15 veces. Alterna con: espera, ven, suelta, sentado.' },
-          { duration: 4, title: 'Juego de Escondite Moderado', description: 'Esconde juguetes y premios. Guía con comandos verbales.' },
-          { duration: 3, title: 'Zona de Relajación', description: 'Siéntate con tu perro. Practica calma, caricias, respiración.' },
-          { duration: 2, title: 'Cierre con Snack', description: 'Premio final por buen comportamiento. Agua fresca.' }
-        ],
-        tip: '🎯 Rutina perfecta para perros adultos balanceados. Hazla diario.',
-        products: ['pelota-suave', 'dispensador', 'juguetes-varios']
-      },
-      'media-parque-5': {
-        title: 'Paseo Express',
-        steps: [
-          { duration: 4, title: 'Caminata Rápida', description: 'Camina con ritmo firme. Practica "junto" sin tirones.' },
-          { duration: 1, title: 'Olfateo Libre', description: 'Deja que olfatee 1 minuto en zona segura.' }
-        ],
-        tip: '🚶 Perfecto para break en día de trabajo.',
-        products: ['correa-comoda']
-      },
-      'media-parque-10': {
-        title: 'Paseo Balanceado',
-        steps: [
-          { duration: 4, title: 'Caminata Moderada', description: 'Ritmo constante. Alterna entre caminar y olfatear.' },
-          { duration: 3, title: 'Fetch Controlado', description: 'Lanza 6 veces. Distancias medias. Sin sobreexcitación.' },
-          { duration: 2, title: 'Socialización Suave', description: 'Si hay otros perros tranquilos, permite saludo breve.' },
-          { duration: 1, title: 'Respiración Final', description: 'Sentado en banco. Observa el entorno tranquilo.' }
-        ],
-        tip: '🌤️ Hazlo 2 veces al día para perros con energía media.',
-        products: ['correa-comoda', 'pelota-suave']
-      },
-      'media-parque-20': {
-        title: 'Aventura Moderada',
-        steps: [
-          { duration: 6, title: 'Caminata Exploratoria', description: 'Camina sin prisa. Deja que olfatee, investigue, marque territorio.' },
-          { duration: 6, title: 'Fetch y Juego Moderado', description: 'Lanza 12 veces. Alterna con comandos y pausas.' },
-          { duration: 4, title: 'Zona de Socialización', description: 'Observa otros perros (sin interacción forzada). Practica calma.' },
-          { duration: 3, title: 'Circuito Natural Suave', description: 'Sube escaleras, camina sobre troncos, explora senderos.' },
-          { duration: 1, title: 'Cierre Tranquilo', description: 'Agua, descanso, observación del entorno.' }
-        ],
-        tip: '🌳 Rutina perfecta para perros adultos. Mantiene salud física y mental.',
-        products: ['correa-comoda', 'pelota-suave', 'botella-agua-portatil']
-      },
-
-      // Energía Baja
-      'baja-departamento-5': {
-        title: 'Estimulación Mínima',
-        steps: [
-          { duration: 3, title: 'Olfato Pasivo', description: 'Esparce premios en alfombra o toalla. Sin esfuerzo físico.' },
-          { duration: 2, title: 'Caricias y Contacto', description: 'Masaje suave en orejas, cuello, pecho. Habla tranquilo.' }
-        ],
-        tip: '😴 Perfecto para perros seniors o días de descanso.',
-        products: ['alfombra-olfativa', 'snacks-suaves']
-      },
-      'baja-departamento-10': {
-        title: 'Relax Enriquecido',
-        steps: [
-          { duration: 4, title: 'Alfombra Olfativa Extendida', description: 'Esparce 10 premios pequeños. Deja que busque sin prisa.' },
-          { duration: 3, title: 'Kong Congelado', description: 'Dale Kong relleno de paté o yogurt congelado. Masticación tranquila.' },
-          { duration: 2, title: 'Masaje Relajante', description: 'Masaje circular en pecho, cuello, base de orejas.' },
-          { duration: 1, title: 'Música Tranquila', description: 'Pon música clásica suave o sonidos de naturaleza.' }
-        ],
-        tip: '🧘 Combina enriquecimiento mental suave con máxima relajación.',
-        products: ['alfombra-olfativa', 'kong-rellenable', 'snacks-suaves']
-      },
-      'baja-departamento-20': {
-        title: 'Sesión de Bienestar',
-        steps: [
-          { duration: 6, title: 'Olfato y Enriquecimiento', description: 'Alfombra olfativa + esconde premios en 5 lugares fáciles. Sin prisa.' },
-          { duration: 6, title: 'Masticación Prolongada', description: 'Kong congelado o hueso dental. Supervisa pero deja que disfrute.' },
-          { duration: 5, title: 'Masaje Completo', description: 'Masaje sistemático: orejas, cuello, pecho, patas, espalda. Movimientos circulares.' },
-          { duration: 2, title: 'Comandos Suaves', description: 'Practica sentado, pata, quieto. Sin exigencia, solo contacto.' },
-          { duration: 1, title: 'Cierre con Calma', description: 'Respiración sincronizada. Habla bajo y tranquilo.' }
-        ],
-        tip: '💤 Perfecta para perros seniors, convalecientes o días de descanso total.',
-        products: ['alfombra-olfativa', 'kong-rellenable', 'cama-ortopedica']
-      },
-      'baja-patio-5': {
-        title: 'Exploración Tranquila',
-        steps: [
-          { duration: 4, title: 'Caminata Muy Lenta', description: 'Recorre el patio sin prisa. Deja que olfatee todo.' },
-          { duration: 1, title: 'Descanso al Sol', description: 'Siéntate con tu perro. Observa el entorno.' }
-        ],
-        tip: '☀️ Ideal para perros seniors. Vitamina D natural.',
-        products: ['cama-exterior']
-      },
-      'baja-patio-10': {
-        title: 'Paseo Contemplativo',
-        steps: [
-          { duration: 5, title: 'Caminata Pausada', description: 'Explora el patio muy lento. Para cada metro a olfatear.' },
-          { duration: 3, title: 'Zona de Observación', description: 'Siéntate en un lugar. Deja que tu perro observe pájaros, movimientos.' },
-          { duration: 2, title: 'Snack y Agua', description: 'Pequeño premio. Agua fresca. Caricias.' }
-        ],
-        tip: '🌺 No subestimes el poder del olfato para estimular sin cansar.',
-        products: ['snacks-suaves', 'cama-exterior']
-      },
-      'baja-patio-20': {
-        title: 'Conexión con Naturaleza',
-        steps: [
-          { duration: 8, title: 'Exploración Profunda', description: 'Recorre cada rincón del patio. Deja que olfatee plantas, tierra, texturas.' },
-          { duration: 5, title: 'Zona de Descanso', description: 'Siéntate. Deja que tu perro descanse a tu lado o explore cercano.' },
-          { duration: 4, title: 'Enriquecimiento Ambiental', description: 'Coloca objetos nuevos seguros (cajas, botellas vacías). Deja que investigue.' },
-          { duration: 2, title: 'Masaje Exterior', description: 'Masaje suave mientras disfruta aire fresco.' },
-          { duration: 1, title: 'Cierre Tranquilo', description: 'Agua, premio pequeño, respiración.' }
-        ],
-        tip: '🍃 Perfecta para recuperación post-cirugía o perros muy mayores.',
-        products: ['cama-exterior', 'snacks-suaves']
-      },
-      'baja-parque-5': {
-        title: 'Paseo Terapéutico Corto',
-        steps: [
-          { duration: 4, title: 'Caminata Ultra Lenta', description: 'Camina 20 metros muy despacio. Para a olfatear cada metro.' },
-          { duration: 1, title: 'Descanso en Banco', description: 'Siéntate. Observa el entorno juntos.' }
-        ],
-        tip: '🩺 Para perros en recuperación o muy seniors.',
-        products: ['correa-suave', 'arnés-acolchado']
-      },
-      'baja-parque-10': {
-        title: 'Paseo de Bienestar',
-        steps: [
-          { duration: 5, title: 'Caminata Contemplativa', description: 'Ritmo muy lento. Para cada 2 metros a olfatear.' },
-          { duration: 3, title: 'Zona de Césped', description: 'Deja que camine sobre césped. Textura suave en patas.' },
-          { duration: 2, title: 'Descanso y Agua', description: 'Siéntate en banco. Agua, caricias, calma.' }
-        ],
-        tip: '🌿 El contacto con césped natural es terapéutico para articulaciones.',
-        products: ['arnés-acolchado', 'botella-agua-portatil']
-      },
-      'baja-parque-20': {
-        title: 'Sesión de Recuperación',
-        steps: [
-          { duration: 8, title: 'Caminata Terapéutica', description: 'Camina muy lento. Para frecuentemente. Sin estrés ni prisa.' },
-          { duration: 5, title: 'Zona de Descanso Natural', description: 'Encuentra sombra o banco. Deja que descanse mientras observa.' },
-          { duration: 4, title: 'Olfato Pasivo', description: 'Deja que olfatee libremente plantas, tierra, árboles. Sin moverte mucho.' },
-          { duration: 2, title: 'Contacto Social Suave', description: 'Si hay personas u otros perros tranquilos, permite saludo breve.' },
-          { duration: 1, title: 'Cierre Relajado', description: 'Agua, caricias, palabras tranquilas. Respira junto a él.' }
-        ],
-        tip: '🏥 Perfecta para post-operatorio, artritis o perros muy mayores. Consulta con tu vet.',
-        products: ['arnés-acolchado', 'cama-portatil', 'botella-agua-portatil']
-      }
-    };
-
-    // Products database
-    const products = {
-      'juguete-mental': { icon: '🧩', name: 'Juguete Mental Interactive', link: 'https://www.amazon.com/s?k=dog+puzzle+toy' },
-      'alfombra-olfativa': { icon: '👃', name: 'Alfombra Olfativa', link: 'https://www.amazon.com/s?k=snuffle+mat+dog' },
-      'dispensador': { icon: '🎯', name: 'Dispensador de Snacks', link: 'https://www.amazon.com/s?k=dog+treat+dispenser' },
-      'kong-rellenable': { icon: '🦴', name: 'Kong Rellenable', link: 'https://www.amazon.com/s?k=kong+dog+toy' },
-      'pelota-resistente': { icon: '⚽', name: 'Pelota Resistente', link: 'https://www.amazon.com/s?k=indestructible+dog+ball' },
-      'frisbee': { icon: '🥏', name: 'Frisbee para Perros', link: 'https://www.amazon.com/s?k=dog+frisbee' },
-      'cuerda-tira': { icon: '🪢', name: 'Cuerda Tira y Afloja', link: 'https://www.amazon.com/s?k=dog+rope+toy' },
-      'obstaculos': { icon: '🏃', name: 'Set de Obstáculos', link: 'https://www.amazon.com/s?k=dog+agility+set' },
-      'set-agilidad': { icon: '🎪', name: 'Kit Completo Agilidad', link: 'https://www.amazon.com/s?k=dog+agility+equipment' },
-      'correa-larga': { icon: '➰', name: 'Correa Larga (5m)', link: 'https://www.amazon.com/s?k=long+dog+leash' },
-      'pelota-cuerda': { icon: '🎾', name: 'Pelota con Cuerda', link: 'https://www.amazon.com/s?k=ball+on+rope+dog' },
-      'botella-agua-portatil': { icon: '💧', name: 'Botella Agua Portátil', link: 'https://www.amazon.com/s?k=portable+dog+water+bottle' },
-      'juguete-masticable': { icon: '🦷', name: 'Juguete Masticable', link: 'https://www.amazon.com/s?k=dog+chew+toy' },
-      'juguete-suave': { icon: '🧸', name: 'Juguete Suave', link: 'https://www.amazon.com/s?k=soft+dog+toy' },
-      'juguetes-varios': { icon: '🎁', name: 'Set de Juguetes', link: 'https://www.amazon.com/s?k=dog+toy+set' },
-      'pelota-suave': { icon: '🏐', name: 'Pelota Suave', link: 'https://www.amazon.com/s?k=soft+dog+ball' },
-      'correa-comoda': { icon: '🦮', name: 'Correa Cómoda', link: 'https://www.amazon.com/s?k=comfortable+dog+leash' },
-      'snacks-suaves': { icon: '🍖', name: 'Snacks Suaves', link: 'https://www.amazon.com/s?k=soft+dog+treats' },
-      'cama-ortopedica': { icon: '🛏️', name: 'Cama Ortopédica', link: 'https://www.amazon.com/s?k=orthopedic+dog+bed' },
-      'cama-exterior': { icon: '🏕️', name: 'Cama para Exterior', link: 'https://www.amazon.com/s?k=outdoor+dog+bed' },
-      'correa-suave': { icon: '🎀', name: 'Correa Suave', link: 'https://www.amazon.com/s?k=soft+dog+leash' },
-      'arnés-acolchado': { icon: '🦺', name: 'Arnés Acolchado', link: 'https://www.amazon.com/s?k=padded+dog+harness' },
-      'cama-portatil': { icon: '🎒', name: 'Cama Portátil', link: 'https://www.amazon.com/s?k=portable+dog+bed' }
-    };
-
-    // Event Listeners
-    document.querySelectorAll('.option-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
-        const question = this.dataset.question;
-        const value = this.dataset.value;
-        
-        // Remove selection from siblings
-        document.querySelectorAll(`[data-question="${question}"]`).forEach(b => {
-          b.classList.remove('selected');
-        });
-        
-        // Add selection to this button
-        this.classList.add('selected');
-        
-        // Update state
-        state[question] = value;
-        
-        // Check if all answered
-        checkComplete();
-      });
-    });
-
-    document.getElementById('generateBtn').addEventListener('click', generateRoutine);
-
-    function checkComplete() {
-      const complete = state.energia && state.espacio && state.tiempo;
-      document.getElementById('generateBtn').disabled = !complete;
-    }
-
-    function generateRoutine() {
-      // Get routine key
-      const key = `${state.energia}-${state.espacio}-${state.tiempo}`;
-      const routine = routines[key];
-      
-      if (!routine) {
-        alert('Combinación no encontrada. Por favor intenta otra.');
-        return;
-      }
-      
-      // Update title and subtitle
-      document.getElementById('resultTitle').textContent = routine.title;
-      document.getElementById('resultSubtitle').textContent = `${state.tiempo} minutos • Energía ${state.energia.charAt(0).toUpperCase() + state.energia.slice(1)} • ${state.espacio.charAt(0).toUpperCase() + state.espacio.slice(1)}`;
-      
-      // Generate steps
-      const stepsContainer = document.getElementById('routineSteps');
-      stepsContainer.innerHTML = '';
-      
-      routine.steps.forEach((step, index) => {
-        const stepEl = document.createElement('div');
-        stepEl.className = 'step';
-        stepEl.innerHTML = `
-          <div class="step-header">
-            <div class="step-number">${index + 1}</div>
-            <div class="step-duration">${step.duration} min</div>
-            <div class="step-title">${step.title}</div>
-          </div>
-          <div class="step-description">${step.description}</div>
-        `;
-        stepsContainer.appendChild(stepEl);
-      });
-      
-      // Generate tip
-      document.getElementById('tipBox').innerHTML = `<strong>💡 Tip Profesional:</strong> ${routine.tip}`;
-      
-      // Generate products
-      const productGrid = document.getElementById('productGrid');
-      productGrid.innerHTML = '';
-      
-      routine.products.slice(0, 3).forEach(productId => {
-        const product = products[productId];
-        if (product) {
-          const productEl = document.createElement('div');
-          productEl.className = 'product-card';
-          productEl.innerHTML = `
-            <div class="product-icon">${product.icon}</div>
-            <div class="product-name">${product.name}</div>
-            <a href="${product.link}" target="_blank" rel="nofollow noopener" class="product-link">Ver en Amazon</a>
-          `;
-          productGrid.appendChild(productEl);
-        }
-      });
-      
-      // Show result section
-      document.getElementById('questionsSection').style.display = 'none';
-      document.getElementById('resultSection').classList.add('show');
-      
-      // Scroll to result
-      document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
-      
-      // Analytics event
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'routine_generated', {
-          'energia': state.energia,
-          'espacio': state.espacio,
-          'tiempo': state.tiempo
-        });
-      }
-    }
-
-    function resetTool() {
-      // Reset state
-      state.energia = null;
-      state.espacio = null;
-      state.tiempo = null;
-      
-      // Reset buttons
-      document.querySelectorAll('.option-btn').forEach(btn => {
-        btn.classList.remove('selected');
-      });
-      
-      // Reset UI
-      document.getElementById('resultSection').classList.remove('show');
-      document.getElementById('questionsSection').style.display = 'block';
-      document.getElementById('generateBtn').disabled = true;
-      
-      // Scroll to top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    fetch("../partials/footer.html")
+      .then(r => r.text())
+      .then(h => document.getElementById("footer").innerHTML = h);
   </script>
+
+  <!-- JS GLOBAL -->
+  <script src="../js/menu.js"></script>
+  <script src="../js/scrollreveal.js"></script>
+
+  <!-- JS DEL GENERADOR (SIN CAMBIOS) -->
+  <script src="../js/rutina-express.js"></script>
 
   <!-- Schema Markup -->
   <script type="application/ld+json">

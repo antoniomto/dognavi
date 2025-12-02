@@ -219,3 +219,24 @@ nav#mainNav a:hover {
     font-size: 1rem;
   }
 }
+/* ============================================
+   FIX GLOBAL — Asegurar un solo tono de verde
+   ============================================ */
+
+#header,
+#header *:not(.trust-bar):not(.trust-pill),
+.header-wrapper,
+.header-bg,
+.header-container,
+.nav-container {
+    background: #617e67 !important;
+    background-color: #617e67 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Evitar líneas o bordes debajo del header */
+#header {
+    border-bottom: none !important;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.06) !important;
+}

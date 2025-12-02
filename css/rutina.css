@@ -1,0 +1,351 @@
+/* ============================================
+   RUTINA.CSS — Estilos exclusivos de la herramienta
+   ============================================ */
+
+/* -------- HERO -------- */
+.hero-rutina {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+}
+
+.hero-rutina h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.6rem;
+  color: #667e6d;
+  margin-bottom: 0.6rem;
+}
+
+.hero-rutina p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.hero-rutina .badge {
+  display: inline-block;
+  background: #FFB347;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+
+/* -------- QUESTIONS -------- */
+.questions-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  margin-bottom: 2.5rem;
+}
+
+.question-group {
+  margin-bottom: 2rem;
+}
+
+.question-group h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #667e6d;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.question-group .emoji {
+  font-size: 1.5rem;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.option-btn {
+  background: #F4EDE4;
+  border: 2px solid #e1e1e1;
+  padding: 1.2rem;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.option-btn .icon {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.option-btn:hover {
+  border-color: #667e6d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.option-btn.selected {
+  background: #667e6d;
+  color: white;
+  border-color: #667e6d;
+}
+
+
+/* -------- GENERATE BUTTON -------- */
+.generate-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #FFB347 0%, #FFC974 100%);
+  color: #aa9898;
+  padding: 1.2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255,179,71,0.4);
+}
+
+.generate-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(255,179,71,0.45);
+}
+
+.generate-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* -------- RESULT SECTION -------- */
+.result-section {
+  display: none;
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.5s ease;
+}
+
+.result-section.show {
+  display: block;
+}
+
+.result-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #F4EDE4;
+  padding-bottom: 1.5rem;
+}
+
+.result-header h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #667e6d;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.result-header .subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 600;
+}
+
+
+/* -------- STEPS -------- */
+.routine-steps .step {
+  background: #F4EDE4;
+  padding: 1.5rem;
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid #FFB347;
+  transition: 0.25s ease;
+}
+
+.step:hover {
+  transform: translateX(6px);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.step-number {
+  background: #FFB347;
+  color: #333;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+}
+
+.step-duration {
+  background: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 700;
+  color: #667e6d;
+  font-size: 0.9rem;
+}
+
+.step-title {
+  font-weight: 700;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+.step-description {
+  color: #555;
+  margin-left: 3rem;
+  line-height: 1.6;
+}
+
+
+/* -------- TIP -------- */
+.tip-box {
+  background: linear-gradient(135deg, #667e6d 0%, #5a8a78 100%);
+  color: white;
+  padding: 1.6rem;
+  border-radius: 14px;
+  margin: 2rem 0;
+}
+
+.tip-box strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+
+/* -------- PRODUCTS -------- */
+.products h4 {
+  font-family: 'Poppins', sans-serif;
+  color: #667e6d;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.product-img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  margin: 0 auto 0.5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.4rem;
+}
+
+.product-card {
+  background: #F4EDE4;
+  padding: 1.4rem;
+  border-radius: 14px;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-icon {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+
+.product-name {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+.product-link {
+  display: inline-block;
+  background: #FFB347;
+  color: #333;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.product-link:hover {
+  background: #FFC974;
+}
+
+
+/* -------- CTA -------- */
+.cta-box {
+  background: linear-gradient(135deg, #FFB347 0%, #FFC974 100%);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-box h3 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.btn-primary,
+.btn-secondary {
+  border-radius: 50px;
+  padding: 0.9rem 2rem;
+  font-weight: 700;
+  display: inline-block;
+  margin: 0.3rem;
+}
+
+.btn-secondary {
+  border: 2px solid #000000;
+}
+
+
+.btn-secondary:hover {
+  background: #e99f16;
+  color: white;
+}
+
+
+/* ------- ANIMATION ------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ------- RESPONSIVE ------- */
+@media (max-width: 768px) {
+  .hero-rutina h1 {
+    font-size: 2rem;
+  }
+  .questions-section {
+    padding: 1.6rem;
+  }
+  .options {
+    grid-template-columns: 1fr;
+  }
+}
