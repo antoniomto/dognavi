@@ -2,18 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
    <url>
-      <loc>https://dognavi.org/guia/senales-sobrealimentacion</loc>
+      <loc>https://dognavi.org/blog/senales-sobrealimentacion.html</loc>
       <priority>0.85</priority>
    </url>
 
    <url>
-      <loc>https://dognavi.org/guia/actividades-10-minutos</loc>
+      <loc>https://dognavi.org/blog/cuanto-debe-comer-perro-peso.html</loc>
       <priority>0.85</priority>
    </url>
 
    <url>
-      <loc>https://dognavi.org/guia/rutina-perros-departamento</loc>
+      <loc>https://dognavi.org/blog/perro-sobrepeso-plan-4-semanas.html</loc>
       <priority>0.85</priority>
    </url>
+
+   <url>
+      <loc>https://dognavi.org/blog/perro-no-quiere-comer-causas-soluciones.html</loc>
+      <priority>0.85</priority>
+   </url>
+
+   <url>
+      <loc>https://dognavi.org/blog/ansiedad-separacion-perros.html</loc>
+      <priority>0.85</priority>
+   </url>
+
+   <url>
+      <loc>https://dognavi.org/blog/alimentacion-chihuahuas-guia-completa.html</loc>
+      <priority>0.85</priority>
+   </url>
+
 
 </urlset>

@@ -11,10 +11,44 @@
     <a href="/index.html#productos">Productos</a>
   </nav>
 
-  <div class="menu-toggle" onclick="toggleMenu()">
+  <!-- ✅ CAMBIO: Removí onclick, agregué ID -->
+  <div class="menu-toggle" id="menuToggle">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
+  <!-- ✅ SCRIPT INLINE PARA FUNCIONAMIENTO INMEDIATO -->
+  <script>
+  (function() {
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    
+    if (toggle && nav) {
+      // Click en hamburguesa
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nav.classList.toggle('active');
+        toggle.classList.toggle('active');
+      });
+
+      // Click en links (cerrar menú)
+      const links = nav.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', function() {
+          nav.classList.remove('active');
+          toggle.classList.remove('active');
+        });
+      });
+
+      // Click fuera del menú (cerrar)
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+          nav.classList.remove('active');
+          toggle.classList.remove('active');
+        }
+      });
+    }
+  })();
+  </script>
 </header>

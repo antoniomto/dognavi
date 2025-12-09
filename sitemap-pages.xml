@@ -7,42 +7,33 @@
    </url>
 
    <url>
-      <loc>https://dognavi.org/calculadora-alimentacion</loc>
+      <loc>https://dognavi.org/afiliados.html</loc>
       <priority>0.95</priority>
    </url>
 
    <url>
-      <loc>https://dognavi.org/salud</loc>
+      <loc>https://dognavi.org/aviso-legal.html</loc>
       <priority>0.95</priority>
    </url>
 
    <url>
-      <loc>https://dognavi.org/guias</loc>
+      <loc>https://dognavi.org/contacto.html</loc>
       <priority>0.8</priority>
    </url>
 
-   <url>
-      <loc>https://dognavi.org/productos</loc>
-      <priority>0.7</priority>
-   </url>
 
    <url>
-      <loc>https://dognavi.org/sobre</loc>
-      <priority>0.5</priority>
-   </url>
-
-   <url>
-      <loc>https://dognavi.org/aviso-legal</loc>
+      <loc>https://dognavi.org/cookies.html</loc>
       <priority>0.3</priority>
    </url>
 
    <url>
-      <loc>https://dognavi.org/privacidad</loc>
+      <loc>https://dognavi.org/descargo-medico.html</loc>
       <priority>0.3</priority>
    </url>
 
    <url>
-      <loc>https://dognavi.org/cookies</loc>
+      <loc>https://dognavi.org/privacidad.html</loc>
       <priority>0.3</priority>
    </url>
 

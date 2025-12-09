@@ -1,7 +1,6 @@
 /* ============================================
-   HEADER.CSS — DogNavi Clean Premium Build
+   HEADER.CSS – DogNavi Clean Premium Build
    ============================================ */
-
 
 /* ----------------------------
    HEADER GENERAL
@@ -13,7 +12,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #617e67;  /* Verde premium */
+  background: #617e67;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -21,11 +20,16 @@ header {
 }
 
 /* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  z-index: 1001; /* ✅ AGREGADO: Para estar sobre el menú */
+}
+
 .logo-container img {
   height: 60px;
   width: auto;
 }
-
 
 /* ----------------------------
    NAV DESKTOP
@@ -49,7 +53,6 @@ nav#mainNav a:hover {
   color: #FFB347;
 }
 
-
 /* ----------------------------
    HAMBURGUESA (MOBILE)
    ---------------------------- */
@@ -59,16 +62,33 @@ nav#mainNav a:hover {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  z-index: 1001; /* ✅ AGREGADO: Crítico para visibilidad */
+  padding: 8px; /* ✅ AGREGADO: Área de click más grande */
+  background: none; /* ✅ AGREGADO: Sin fondo */
+  border: none; /* ✅ AGREGADO: Sin borde */
 }
 
 .menu-toggle span {
   width: 28px;
   height: 3px;
-  background: #ffffff;   /* Se veía gris y se perdía en móvil → AHORA SIEMPRE BLANCA */
+  background: #ffffff;
   border-radius: 3px;
-  transition: 0.3s ease;
+  transition: all 0.3s ease; /* ✅ CAMBIADO: De 0.3s a all 0.3s */
+  display: block; /* ✅ AGREGADO: Asegurar display correcto */
 }
 
+/* ✅ AGREGADO: Animación hamburguesa a X */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
 
 /* ----------------------------
    NAV MÓVIL (SLIDE-DOWN)
@@ -77,38 +97,41 @@ nav#mainNav a:hover {
 @media (max-width: 860px) {
 
   .menu-toggle {
-    display: flex;
+    display: flex !important; /* ✅ CAMBIADO: Agregado !important */
   }
 
   nav#mainNav {
-    position: absolute;
-    top: 100%;
+    position: fixed; /* ✅ CAMBIADO: De absolute a fixed */
+    top: 0; /* ✅ CAMBIADO: De 100% a 0 */
+    left: 0; /* ✅ AGREGADO: Para cubrir toda la pantalla */
     right: 0;
     width: 100%;
-    background: #617e67;   /* ANTES BLANCO = MENÚ INVISIBLE → FIX */
+    height: 100vh; /* ✅ AGREGADO: Pantalla completa */
+    background: #617e67;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* ✅ AGREGADO: Centrar verticalmente */
     padding: 2rem 0;
-    gap: 1.6rem;
+    gap: 2rem; /* ✅ CAMBIADO: De 1.6rem a 2rem */
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    transform: translateY(-120%);
+    transform: translateX(-100%); /* ✅ CAMBIADO: Slide desde izquierda */
     opacity: 0;
     pointer-events: none;
-    transition: 0.35s ease;
+    transition: all 0.35s ease; /* ✅ CAMBIADO: Agregado all */
+    z-index: 1000; /* ✅ AGREGADO: Debajo del logo y hamburguesa */
   }
 
   nav#mainNav.active {
-    transform: translateY(0%);
+    transform: translateX(0); /* ✅ CAMBIADO: De translateY a translateX */
     opacity: 1;
     pointer-events: all;
   }
 
   nav#mainNav a {
-    font-size: 1.25rem;
-    color: #ffffff !important; /* Forzamos visibilidad */
+    font-size: 1.4rem; /* ✅ CAMBIADO: De 1.25rem a 1.4rem */
+    color: #ffffff !important;
   }
 }
-
 
 /* ----------------------------
    TRUST BAR (Premium)
@@ -150,7 +173,6 @@ nav#mainNav a:hover {
     padding: 1.4rem 1rem;
   }
 }
-
 
 /* ----------------------------
    HERO (BANNER)
@@ -206,7 +228,6 @@ nav#mainNav a:hover {
   text-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
 
-
 /* ----------------------------
    RESPONSIVE HERO
    ---------------------------- */
@@ -219,24 +240,17 @@ nav#mainNav a:hover {
     font-size: 1rem;
   }
 }
+
 /* ============================================
-   FIX GLOBAL — Asegurar un solo tono de verde
+   FIX GLOBAL – Asegurar un solo tono de verde
    ============================================ */
 
 #header,
-#header *:not(.trust-bar):not(.trust-pill),
-.header-wrapper,
-.header-bg,
-.header-container,
-.nav-container {
-    background: #617e67 !important;
-    background-color: #617e67 !important;
-    border: none !important;
-    box-shadow: none !important;
+#header *:not(.trust-bar):not(.trust-pill) {
+  border: none !important;
 }
 
-/* Evitar líneas o bordes debajo del header */
 #header {
-    border-bottom: none !important;
-    box-shadow: 0 2px 14px rgba(0,0,0,0.06) !important;
+  border-bottom: none !important;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.06) !important;
 }
